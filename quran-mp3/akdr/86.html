@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>سورة الطارق بصوت الشيخ إبراهيم الأخضر MP3</title>
+  <meta name="description" content="استمع إلى سورة الطارق بصوت الشيخ إبراهيم الأخضر مع إمكانية التحميل المباشر للسورة بصيغة MP3">
+  <meta name="robots" content="index,follow">
+
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/quran-mp3.css">
+
+  <style>
+    .surah-audio-card {
+      max-width: 760px;
+      margin: 0 auto 32px;
+      padding: 28px;
+      border: 1px solid #e2e2e2;
+      border-radius: 14px;
+      background: #fff;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .surah-reciter-image {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 18px;
+    }
+
+    .surah-audio-card h2 { margin: 8px 0 12px; }
+
+    .surah-description {
+      margin: 0 auto 22px;
+      max-width: 680px;
+      line-height: 1.9;
+    }
+
+    .surah-audio-player {
+      width: 100%;
+      max-width: 650px;
+      display: block;
+      margin: 0 auto 16px;
+    }
+
+    .download-mp3-btn {
+      display: inline-block;
+      margin: 4px auto 8px;
+      padding: 12px 22px;
+      border-radius: 10px;
+      background: #1f7a5c;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .download-mp3-btn:hover { opacity: .9; }
+
+    .surah-nav {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .surah-nav a, .surah-nav span {
+      flex: 1;
+      text-decoration: none;
+      padding: 10px 14px;
+    }
+
+    .surah-nav .disabled { opacity: .45; }
+
+    .other-surahs-section { margin-top: 34px; }
+
+    .other-surahs-section h2 { margin-bottom: 20px; }
+
+    .other-surahs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0;
+      border-top: 1px solid #dedede;
+      border-right: 1px solid #dedede;
+    }
+
+    .other-surah-link {
+      display: block;
+      padding: 12px 10px;
+      border: 0;
+      border-left: 1px solid #dedede;
+      border-bottom: 1px solid #dedede;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .same-surah-reciters-section {
+      margin-top: 40px;
+    }
+
+    .same-surah-reciters-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      border: 0;
+    }
+
+    .same-surah-reciter-link {
+      display: flex;
+      min-height: 190px;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 12px;
+      box-sizing: border-box;
+      background: #FAFAFA;
+      border: 1px solid #e4e4e4;
+      border-radius: 12px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .same-surah-reciter-image {
+      display: block;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .same-surah-reciter-link span {
+      display: block;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .surah-audio-card { padding: 20px 14px; }
+      .surah-reciter-image { width: 110px; height: 110px; }
+      .surah-nav { flex-direction: column; }
+      .same-surah-reciters-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 420px) {
+      .surah-index-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .same-surah-reciters-grid { grid-template-columns: 1fr; }
+      .same-surah-reciter-link { min-height: 170px; }
+      .same-surah-reciter-image { width: 105px; height: 105px; }
+    }
+
+    @media (max-width: 900px) {
+      html, body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
+      .page-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 14px !important;
+        left: 0 !important;
+        position: static !important;
+        box-sizing: border-box !important;
+      }
+
+      main {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 20px auto !important;
+        padding: 0 !important;
+        flex-direction: column !important;
+        gap: 24px !important;
+        box-sizing: border-box;
+      }
+
+      .content, .mp3-content, .mp3-page, .sidebar {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+      }
+
+      .surah-audio-card,
+      .surah-audio-player {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="main-header">
+    <div class="container">
+      <a href="../../index.html" class="logo">
+        <img src="../../images/QuranLogo.webp" alt="موقع القرآن الكريم">
+      </a>
+
+      <nav class="main-nav" aria-label="القائمة الرئيسية">
+        <ul>
+          <li><a href="../../index.html">الرئيسية</a></li>
+          <li><a href="../../fahras.html">فهرس القرآن الكريم</a></li>
+
+          <li class="dropdown">
+            <a href="../../quran-pdf.html">القرآن الكريم PDF ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="../../quran-pdf/mashaf-almadinat.html">مصحف المدينة المنورة</a></li>
+              <li><a href="../../quran-pdf/juza-eam.html">جزء عم</a></li>
+              <li><a href="../../quran-pdf/juza-tabarak.html">جزء تبارك</a></li>
+              <li><a href="../../quran-pdf/juza-qadsamie.html">جزء قد سمع</a></li>
+              <li><a href="../../quran-pdf/rube-ys.html">ربع يس</a></li>
+            </ul>
+          </li>
+
+          <li><a href="../../quran-mp3.html" aria-current="page">القرآن الكريم MP3</a></li>
+          <li><a href="../../contact.html">اتصل بنا</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <header class="page-header">
+    <div class="page-wrapper">
+      <h1>سورة الطارق بصوت الشيخ إبراهيم الأخضر</h1>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <main>
+
+      <div class="content mp3-content">
+        <article class="mp3-page">
+
+          <div class="surah-audio-card">
+
+            <img
+              class="surah-reciter-image"
+              src="../../images/akdr.webp"
+              alt="صورة الشيخ إبراهيم الأخضر"
+              loading="lazy">
+
+            <h2>سورة الطارق بصوت الشيخ إبراهيم الأخضر</h2>
+
+            <p class="surah-description">
+              الاستماع لسورة الطارق بصوت الشيخ إبراهيم الأخضر
+              مع إمكانية التحميل المباشر للسورة بصيغة MP3
+            </p>
+
+            <!--
+              لا نستخدم
+              حتى يبقى خيار Download متاحاً من قائمة الثلاث نقاط
+              في المتصفحات التي تدعم ذلك.
+            -->
+            <audio class="surah-audio-player" controls autoplay preload="auto">
+              <source src="../../mp3/akdr/86.mp3" type="audio/mpeg">
+              متصفحك لا يدعم تشغيل ملفات الصوت.
+            </audio>
+
+            <a class="download-mp3-btn" href="../../mp3/akdr/86.mp3" download>
+              تحميل سورة الطارق MP3
+            </a>
+
+            <nav class="surah-nav" aria-label="التنقل بين السور">
+              <a class="previous-surah" href="85.html">→ سورة البروج</a>
+              <a class="next-surah" href="87.html">سورة الأعلى ←</a>
+            </nav>
+
+          </div>
+
+          <section class="other-surahs-section" aria-labelledby="other-surahs-title">
+            <h2 id="other-surahs-title">سور أخرى بصوت الشيخ إبراهيم الأخضر</h2>
+            <div class="other-surahs-grid surah-index-grid">
+              <a class="other-surah-link" href="107.html">سورة الماعون</a>
+              <a class="other-surah-link" href="78.html">سورة النبأ</a>
+              <a class="other-surah-link" href="43.html">سورة الزخرف</a>
+              <a class="other-surah-link" href="30.html">سورة الروم</a>
+              <a class="other-surah-link" href="27.html">سورة النمل</a>
+              <a class="other-surah-link" href="57.html">سورة الحديد</a>
+              <a class="other-surah-link" href="48.html">سورة الفتح</a>
+              <a class="other-surah-link" href="40.html">سورة غافر</a>
+              <a class="other-surah-link" href="39.html">سورة الزمر</a>
+              <a class="other-surah-link" href="104.html">سورة الهمزة</a>
+              <a class="other-surah-link" href="79.html">سورة النازعات</a>
+              <a class="other-surah-link" href="21.html">سورة الأنبياء</a>
+              <a class="other-surah-link" href="28.html">سورة القصص</a>
+              <a class="other-surah-link" href="31.html">سورة لقمان</a>
+              <a class="other-surah-link" href="1.html">سورة الفاتحة</a>
+              <a class="other-surah-link" href="10.html">سورة يونس</a>
+              <a class="other-surah-link" href="11.html">سورة هود</a>
+              <a class="other-surah-link" href="62.html">سورة الجمعة</a>
+            </div>
+          </section>
+
+          <section class="other-surahs-section same-surah-reciters-section" aria-labelledby="same-surah-reciters-title">
+            <h2 id="same-surah-reciters-title">سورة الطارق بصوت قراء آخرين</h2>
+            <div class="other-surahs-grid same-surah-reciters-grid">
+              <a class="other-surah-link same-surah-reciter-link" href="../qht/86.html">
+  <img class="same-surah-reciter-image" src="../../images/qht.webp" alt="صورة الشيخ خالد القحطاني" loading="lazy">
+  <span>سورة الطارق بصوت الشيخ خالد القحطاني</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../hkm/86.html">
+  <img class="same-surah-reciter-image" src="../../images/hkm.webp" alt="صورة الشيخ صابر عبدالحكم" loading="lazy">
+  <span>سورة الطارق بصوت الشيخ صابر عبدالحكم</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../rami/86.html">
+  <img class="same-surah-reciter-image" src="../../images/rami.webp" alt="صورة الشيخ رامي الدعيس" loading="lazy">
+  <span>سورة الطارق بصوت الشيخ رامي الدعيس</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../wdee3/86.html">
+  <img class="same-surah-reciter-image" src="../../images/wdee3.webp" alt="صورة الشيخ وديع اليمني" loading="lazy">
+  <span>سورة الطارق بصوت الشيخ وديع اليمني</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../nufais/86.html">
+  <img class="same-surah-reciter-image" src="../../images/nufais.webp" alt="صورة الشيخ أحمد النفيس" loading="lazy">
+  <span>سورة الطارق بصوت الشيخ أحمد النفيس</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../ra3ad/86.html">
+  <img class="same-surah-reciter-image" src="../../images/ra3ad.webp" alt="صورة الشيخ مصطفى رعد العزاوي" loading="lazy">
+  <span>سورة الطارق بصوت الشيخ مصطفى رعد العزاوي</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../harthi/86.html">
+  <img class="same-surah-reciter-image" src="../../images/harthi.webp" alt="صورة الشيخ معيض الحارثي" loading="lazy">
+  <span>سورة الطارق بصوت الشيخ معيض الحارثي</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../yahya/86.html">
+  <img class="same-surah-reciter-image" src="../../images/yahya.webp" alt="صورة الشيخ يحيى حوا" loading="lazy">
+  <span>سورة الطارق بصوت الشيخ يحيى حوا</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../mzroyee/86.html">
+  <img class="same-surah-reciter-image" src="../../images/mzroyee.webp" alt="صورة الشيخ ياسر المزروعي" loading="lazy">
+  <span>سورة الطارق بصوت الشيخ ياسر المزروعي</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../shatri/86.html">
+  <img class="same-surah-reciter-image" src="../../images/shatri.webp" alt="صورة الشيخ أبو بكر الشاطري" loading="lazy">
+  <span>سورة الطارق بصوت الشيخ أبو بكر الشاطري</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../abdullah/86.html">
+  <img class="same-surah-reciter-image" src="../../images/abdullah.webp" alt="صورة الشيخ محمد عبدالحكيم سعيد العبدالله" loading="lazy">
+  <span>سورة الطارق بصوت الشيخ محمد عبدالحكيم سعيد العبدالله</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../mhsny/86.html">
+  <img class="same-surah-reciter-image" src="../../images/mhsny.webp" alt="صورة الشيخ محمد المحيسني" loading="lazy">
+  <span>سورة الطارق بصوت الشيخ محمد المحيسني</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../s_bud/86.html">
+  <img class="same-surah-reciter-image" src="../../images/s_bud.webp" alt="صورة الشيخ صلاح البدير" loading="lazy">
+  <span>سورة الطارق بصوت الشيخ صلاح البدير</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../saad/86.html">
+  <img class="same-surah-reciter-image" src="../../images/saad.webp" alt="صورة الشيخ سعد المقرن" loading="lazy">
+  <span>سورة الطارق بصوت الشيخ سعد المقرن</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../taher/86.html">
+  <img class="same-surah-reciter-image" src="../../images/taher.webp" alt="صورة الشيخ شيرزاد عبدالرحمن طاهر" loading="lazy">
+  <span>سورة الطارق بصوت الشيخ شيرزاد عبدالرحمن طاهر</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../adel_alkalbani/86.html">
+  <img class="same-surah-reciter-image" src="../../images/adel_alkalbani.webp" alt="صورة الشيخ عادل الكلباني" loading="lazy">
+  <span>سورة الطارق بصوت الشيخ عادل الكلباني</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../fateh/86.html">
+  <img class="same-surah-reciter-image" src="../../images/fateh.webp" alt="صورة الشيخ الفاتح محمد الزبير" loading="lazy">
+  <span>سورة الطارق بصوت الشيخ الفاتح محمد الزبير</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../twfeeq/86.html">
+  <img class="same-surah-reciter-image" src="../../images/twfeeq.webp" alt="صورة الشيخ توفيق الصايغ" loading="lazy">
+  <span>سورة الطارق بصوت الشيخ توفيق الصايغ</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../s_hashemi/86.html">
+  <img class="same-surah-reciter-image" src="../../images/s_hashemi.webp" alt="صورة الشيخ سيد أحمد هاشمي" loading="lazy">
+  <span>سورة الطارق بصوت الشيخ سيد أحمد هاشمي</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../mhmdfqih/86.html">
+  <img class="same-surah-reciter-image" src="../../images/mhmdfqih.webp" alt="صورة الشيخ محمد الفقيه" loading="lazy">
+  <span>سورة الطارق بصوت الشيخ محمد الفقيه</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../tareq/86.html">
+  <img class="same-surah-reciter-image" src="../../images/tareq.webp" alt="صورة الشيخ طارق عبدالغني دعوب" loading="lazy">
+  <span>سورة الطارق بصوت الشيخ طارق عبدالغني دعوب</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../ryan/86.html">
+  <img class="same-surah-reciter-image" src="../../images/ryan.webp" alt="صورة الشيخ عادل ريان" loading="lazy">
+  <span>سورة الطارق بصوت الشيخ عادل ريان</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../waleed/86.html">
+  <img class="same-surah-reciter-image" src="../../images/waleed.webp" alt="صورة الشيخ وليد النائحي" loading="lazy">
+  <span>سورة الطارق بصوت الشيخ وليد النائحي</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../bilal/86.html">
+  <img class="same-surah-reciter-image" src="../../images/bilal.webp" alt="صورة الشيخ موسى بلال" loading="lazy">
+  <span>سورة الطارق بصوت الشيخ موسى بلال</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../shamrani/86.html">
+  <img class="same-surah-reciter-image" src="../../images/shamrani.webp" alt="صورة الشيخ صالح الشمراني" loading="lazy">
+  <span>سورة الطارق بصوت الشيخ صالح الشمراني</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../husr/86.html">
+  <img class="same-surah-reciter-image" src="../../images/husr.webp" alt="صورة الشيخ محمود خليل الحصري" loading="lazy">
+  <span>سورة الطارق بصوت الشيخ محمود خليل الحصري</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../alzain/86.html">
+  <img class="same-surah-reciter-image" src="../../images/alzain.webp" alt="صورة الشيخ الزين محمد أحمد" loading="lazy">
+  <span>سورة الطارق بصوت الشيخ الزين محمد أحمد</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../koshi/86.html">
+  <img class="same-surah-reciter-image" src="../../images/koshi.webp" alt="صورة الشيخ العيون الكوشي" loading="lazy">
+  <span>سورة الطارق بصوت الشيخ العيون الكوشي</span>
+</a>
+            </div>
+          </section>
+
+        </article>
+      </div>
+
+      <aside class="sidebar">
+        <div class="download-quran">القرآن الكريم</div>
+
+        <div class="mushaf-section">
+          <a href="../../quran-pdf.html">
+            <img src="../../images/hafs.webp" alt="تحميل القرآن الكريم">
+            <p class="mushaf-caption">إصدارات مصحف حفص PDF</p>
+          </a>
+        </div>
+
+        <hr class="separator">
+
+        <div class="download-quran">روابط مهمة</div>
+
+        <div class="sidebar-links">
+          <ul>
+            <li><a href="../../fahras.html">فهرس السور</a></li>
+            <li><a href="../../quran-pdf.html">تحميل القرآن PDF</a></li>
+            <li><a href="../../quran-mp3.html">الاستماع إلى القرآن</a></li>
+          </ul>
+        </div>
+
+        <hr class="separator">
+
+        <div class="download-quran">أشهر القراء</div>
+
+        <div class="reciters">
+          <a href="../sds/86.html" class="reciter">
+            <img src="../../images/sds.webp" alt="عبدالرحمن السديس" loading="lazy">
+            <span>عبدالرحمن السديس</span>
+          </a>
+          <a href="../shur/86.html" class="reciter">
+            <img src="../../images/shur.webp" alt="سعود الشريم" loading="lazy">
+            <span>سعود الشريم</span>
+          </a>
+          <a href="../minsh/86.html" class="reciter">
+            <img src="../../images/minsh.webp" alt="محمد صديق المنشاوي" loading="lazy">
+            <span>محمد صديق المنشاوي</span>
+          </a>
+          <a href="../afs/86.html" class="reciter">
+            <img src="../../images/afs.webp" alt="مشاري العفاسي" loading="lazy">
+            <span>مشاري العفاسي</span>
+          </a>
+          <a href="../ajm/86.html" class="reciter">
+            <img src="../../images/ajm.webp" alt="أحمد بن علي العجمي" loading="lazy">
+            <span>أحمد بن علي العجمي</span>
+          </a>
+          <a href="../basit/86.html" class="reciter">
+            <img src="../../images/basit.webp" alt="عبدالباسط عبدالصمد" loading="lazy">
+            <span>عبدالباسط عبدالصمد</span>
+          </a>
+          <a href="../s_gmd/86.html" class="reciter">
+            <img src="../../images/s_gmd.webp" alt="سعد الغامدي" loading="lazy">
+            <span>سعد الغامدي</span>
+          </a>
+          <a href="../yasser/86.html" class="reciter">
+            <img src="../../images/yasser.webp" alt="ياسر الدوسري" loading="lazy">
+            <span>ياسر الدوسري</span>
+          </a>
+        </div>
+
+        <hr class="separator">
+
+        <div class="download-quran">ذكر ودعاء</div>
+
+        <div class="sidebar-links">
+          <ul>
+            <li><a href="../../azkar.html">أذكار الصباح والمساء</a></li>
+            <li><a href="../../duas.html">أدعية النبي ﷺ</a></li>
+            <li><a href="../../ruqia.html">الرقية الشرعية</a></li>
+          </ul>
+        </div>
+      </aside>
+
+    </main>
+  </div>
+
+  <footer>
+    <div class="page-wrapper">
+      <p>© موقع القرآن الكريم</p>
+    </div>
+  </footer>
+
+  <script src="../../dark-mode.js" defer></script>
+</body>
+</html>

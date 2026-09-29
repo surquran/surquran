@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>القرآن الكريم MP3 - استماع وتحميل القرآن بصوت جميع القراء</title>
+  <meta name="description" content="استمع إلى القرآن الكريم MP3 بصوت جميع القراء، واختر القارئ ثم السورة للاستماع أو التحميل مباشرة.">
+  <meta name="robots" content="index,follow">
+
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    /* بطاقات القراء: خمسة أعمدة على الكمبيوتر */
+    .reciters-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .mp3-reciter-card {
+      display: flex !important;
+      min-width: 0 !important;
+      min-height: 165px;
+      padding: 10px 5px !important;
+      overflow: hidden !important;
+      box-sizing: border-box !important;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .reciter-photo {
+      display: block !important;
+      width: 110px !important;
+      height: 110px !important;
+      min-width: 110px !important;
+      min-height: 110px !important;
+      max-width: 110px !important;
+      max-height: 110px !important;
+      aspect-ratio: 1 / 1;
+      border-radius: 50% !important;
+      object-fit: cover !important;
+      margin: 0 auto 6px !important;
+      flex: 0 0 88px;
+      align-self: center;
+    }
+
+    .mp3-reciter-card .reciter-name {
+      display: block !important;
+      width: 100% !important;
+      max-width: 100% !important;
+      min-width: 0 !important;
+      margin: 0 !important;
+      padding: 0 2px !important;
+      box-sizing: border-box !important;
+      font-size: 16px !important;
+      line-height: 1.5 !important;
+      text-align: center !important;
+      align-self: center !important;
+      white-space: normal !important;
+      overflow-wrap: anywhere !important;
+      word-break: break-word !important;
+      hyphens: auto;
+    }
+
+    @media (max-width: 900px) {
+      .reciters-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 470px) {
+      .reciters-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* فلترة القراء حسب الحروف الهجائية */
+    .alphabet-filter {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 7px;
+      margin: 18px 0 22px;
+      direction: rtl;
+    }
+
+    .alphabet-filter button {
+      min-width: 38px;
+      height: 38px;
+      padding: 0 9px;
+      border: 1px solid #d9d9d9;
+      border-radius: 7px;
+      background: #fafafa;
+      color: inherit;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .alphabet-filter button:hover,
+    .alphabet-filter button.active {
+      border-color: #E6E0D5;
+      background: #E6E0D5;
+      color: #fff;
+    }
+
+    .alphabet-empty {
+      display: none;
+      text-align: center;
+      padding: 22px 10px;
+      font-size: 17px;
+    }
+
+    @media (max-width: 470px) {
+      .alphabet-filter {
+        gap: 5px;
+      }
+
+      .alphabet-filter button {
+        min-width: 34px;
+        height: 34px;
+        padding: 0 7px;
+        font-size: 15px;
+      }
+    }
+
+
+    .reciters-grid .mp3-reciter-card[hidden] {
+      display: none !important;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header class="main-header">
+    <div class="container">
+
+      <a href="index.html" class="logo">
+        <img src="images/QuranLogo.webp" alt="موقع القرآن الكريم">
+      </a>
+
+      <nav class="main-nav" aria-label="القائمة الرئيسية">
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="fahras.html">فهرس القرآن الكريم</a></li>
+
+          <li class="dropdown">
+            <a href="quran-pdf.html">القرآن الكريم PDF ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="quran-pdf/mashaf-almadinat.html">مصحف المدينة المنورة</a></li>
+              <li><a href="quran-pdf/juza-eam.html">جزء عم</a></li>
+              <li><a href="quran-pdf/juza-tabarak.html">جزء تبارك</a></li>
+              <li><a href="quran-pdf/juza-qadsamie.html">جزء قد سمع</a></li>
+              <li><a href="quran-pdf/rube-ys.html">ربع يس</a></li>
+            </ul>
+          </li>
+
+          <li><a href="quran-mp3.html" aria-current="page">القرآن الكريم MP3</a></li>
+          <li><a href="contact.html">اتصل بنا</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <header class="page-header">
+    <div class="page-wrapper">
+      <h1>القرآن الكريم MP3</h1>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <main>
+
+      <div class="content mp3-content">
+        <article class="mp3-page">
+
+          <h2>استماع وتحميل القرآن الكريم بصوت جميع القراء</h2>
+          <p class="mp3-intro">
+            اختر القارئ للاستماع إلى سور القرآن الكريم كاملة بصيغة MP3.
+            جميع روابط القراء صفحات مباشرة وسهلة التصفح على الجوال والكمبيوتر.
+          </p>
+
+          <div class="quran-stats mp3-stats" aria-label="إحصائيات مكتبة الصوت">
+            <div class="stat-box">
+              <p>سور القرآن</p>
+              <h3>114</h3>
+            </div>
+            <div class="stat-box">
+              <p>القراء</p>
+              <h3>110</h3>
+            </div>
+            <div class="stat-box">
+              <p>الصيغة</p>
+              <h3>MP3</h3>
+            </div>
+          </div>
+
+
+          <section class="reciters-section" aria-labelledby="all-reciters">
+            <h2 id="all-reciters">جميع القراء</h2>
+
+
+            <div class="alphabet-filter" aria-label="ترتيب القراء حسب الحروف الهجائية">
+              <button type="button" class="active" data-letter="all">الكل</button>
+              <button type="button" data-letter="ا">ا</button>
+              <button type="button" data-letter="ب">ب</button>
+              <button type="button" data-letter="ت">ت</button>
+              <button type="button" data-letter="ث">ث</button>
+              <button type="button" data-letter="ج">ج</button>
+              <button type="button" data-letter="ح">ح</button>
+              <button type="button" data-letter="خ">خ</button>
+              <button type="button" data-letter="د">د</button>
+              <button type="button" data-letter="ذ">ذ</button>
+              <button type="button" data-letter="ر">ر</button>
+              <button type="button" data-letter="ز">ز</button>
+              <button type="button" data-letter="س">س</button>
+              <button type="button" data-letter="ش">ش</button>
+              <button type="button" data-letter="ص">ص</button>
+              <button type="button" data-letter="ض">ض</button>
+              <button type="button" data-letter="ط">ط</button>
+              <button type="button" data-letter="ظ">ظ</button>
+              <button type="button" data-letter="ع">ع</button>
+              <button type="button" data-letter="غ">غ</button>
+              <button type="button" data-letter="ف">ف</button>
+              <button type="button" data-letter="ق">ق</button>
+              <button type="button" data-letter="ك">ك</button>
+              <button type="button" data-letter="ل">ل</button>
+              <button type="button" data-letter="م">م</button>
+              <button type="button" data-letter="ن">ن</button>
+              <button type="button" data-letter="ه">ه</button>
+              <button type="button" data-letter="و">و</button>
+              <button type="button" data-letter="ي">ي</button>
+            </div>
+            <p class="alphabet-empty" id="alphabet-empty">لا يوجد قراء بهذا الحرف حاليًا.</p>
+
+            <div class="reciters-grid">
+              <a href="quran-mp3/abdullah/index.html" class="mp3-reciter-card" data-name="محمد عبدالحكيم سعيد العبدالله">
+                <img src="images/abdullah.webp" alt="صورة الشيخ محمد عبدالحكيم سعيد العبدالله" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">محمد عبدالحكيم سعيد العبدالله</span>
+              </a>
+              <a href="quran-mp3/abdulrahman_alshahhat/index.html" class="mp3-reciter-card" data-name="عبدالرحمن الشحات">
+                <img src="images/abdulrahman_alshahhat.webp" alt="صورة الشيخ عبدالرحمن الشحات" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">عبدالرحمن الشحات</span>
+              </a>
+              <a href="quran-mp3/abdulrahman_majed/index.html" class="mp3-reciter-card" data-name="عبدالرحمن الماجد">
+                <img src="images/abdulrahman_majed.webp" alt="صورة الشيخ عبدالرحمن الماجد" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">عبدالرحمن الماجد</span>
+              </a>
+              <a href="quran-mp3/abkr/index.html" class="mp3-reciter-card" data-name="إدريس أبكر">
+                <img src="images/abkr.webp" alt="صورة الشيخ إدريس أبكر" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">إدريس أبكر</span>
+              </a>
+              <a href="quran-mp3/adel_alkalbani/index.html" class="mp3-reciter-card" data-name="عادل الكلباني">
+                <img src="images/adel_alkalbani.webp" alt="صورة الشيخ عادل الكلباني" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">عادل الكلباني</span>
+              </a>
+              <a href="quran-mp3/afs/index.html" class="mp3-reciter-card" data-name="مشاري العفاسي">
+                <img src="images/afs.webp" alt="صورة الشيخ مشاري العفاسي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">مشاري العفاسي</span>
+              </a>
+              <a href="quran-mp3/ajm/index.html" class="mp3-reciter-card" data-name="أحمد بن علي العجمي">
+                <img src="images/ajm.webp" alt="صورة الشيخ أحمد بن علي العجمي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">أحمد بن علي العجمي</span>
+              </a>
+              <a href="quran-mp3/akdr/index.html" class="mp3-reciter-card" data-name="إبراهيم الأخضر">
+                <img src="images/akdr.webp" alt="صورة الشيخ إبراهيم الأخضر" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">إبراهيم الأخضر</span>
+              </a>
+              <a href="quran-mp3/akrm/index.html" class="mp3-reciter-card" data-name="أكرم العلاقمي">
+                <img src="images/akrm.webp" alt="صورة الشيخ أكرم العلاقمي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">أكرم العلاقمي</span>
+              </a>
+              <a href="quran-mp3/alzain/index.html" class="mp3-reciter-card" data-name="الزين محمد أحمد">
+                <img src="images/alzain.webp" alt="صورة الشيخ الزين محمد أحمد" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">الزين محمد أحمد</span>
+              </a>
+              <a href="quran-mp3/anas_alemadi/index.html" class="mp3-reciter-card" data-name="أنس العمادي">
+                <img src="images/anas_alemadi.webp" alt="صورة الشيخ أنس العمادي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">أنس العمادي</span>
+              </a>
+              <a href="quran-mp3/ayyoub2/index.html" class="mp3-reciter-card" data-name="محمد أيوب">
+                <img src="images/ayyoub2.webp" alt="صورة الشيخ محمد أيوب" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">محمد أيوب</span>
+              </a>
+              <a href="quran-mp3/bader/index.html" class="mp3-reciter-card" data-name="بدر التركي">
+                <img src="images/bader.webp" alt="صورة الشيخ بدر التركي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">بدر التركي</span>
+              </a>
+              <a href="quran-mp3/balilah/index.html" class="mp3-reciter-card" data-name="بندر بليلة">
+                <img src="images/balilah.webp" alt="صورة الشيخ بندر بليلة" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">بندر بليلة</span>
+              </a>
+              <a href="quran-mp3/basit/index.html" class="mp3-reciter-card" data-name="عبدالباسط عبدالصمد">
+                <img src="images/basit.webp" alt="صورة الشيخ عبدالباسط عبدالصمد" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">عبدالباسط عبدالصمد</span>
+              </a>
+              <a href="quran-mp3/bilal/index.html" class="mp3-reciter-card" data-name="موسى بلال">
+                <img src="images/bilal.webp" alt="صورة الشيخ موسى بلال" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">موسى بلال</span>
+              </a>
+              <a href="quran-mp3/bna/index.html" class="mp3-reciter-card" data-name="محمود علي البنا">
+                <img src="images/bna.webp" alt="صورة الشيخ محمود علي البنا" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">محمود علي البنا</span>
+              </a>
+              <a href="quran-mp3/bsfr/index.html" class="mp3-reciter-card" data-name="عبدالله بصفر">
+                <img src="images/bsfr.webp" alt="صورة الشيخ عبدالله بصفر" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">عبدالله بصفر</span>
+              </a>
+              <a href="quran-mp3/bu_khtr/index.html" class="mp3-reciter-card" data-name="صلاح بو خاطر">
+                <img src="images/bu_khtr.webp" alt="صورة الشيخ صلاح بو خاطر" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">صلاح بو خاطر</span>
+              </a>
+              <a href="quran-mp3/dokali/index.html" class="mp3-reciter-card" data-name="الدوكالي محمد العالم">
+                <img src="images/dokali.webp" alt="صورة الشيخ الدوكالي محمد العالم" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">الدوكالي محمد العالم</span>
+              </a>
+              <a href="quran-mp3/fateh/index.html" class="mp3-reciter-card" data-name="الفاتح محمد الزبير">
+                <img src="images/fateh.webp" alt="صورة الشيخ الفاتح محمد الزبير" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">الفاتح محمد الزبير</span>
+              </a>
+              <a href="quran-mp3/h_abudalal/index.html" class="mp3-reciter-card" data-name="هاشم أبو دلال">
+                <img src="images/h_abudalal.webp" alt="صورة الشيخ هاشم أبو دلال" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">هاشم أبو دلال</span>
+              </a>
+              <a href="quran-mp3/h_dukhain/index.html" class="mp3-reciter-card" data-name="هيثم الدخين">
+                <img src="images/h_dukhain.webp" alt="صورة الشيخ هيثم الدخين" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">هيثم الدخين</span>
+              </a>
+              <a href="quran-mp3/habdan/index.html" class="mp3-reciter-card" data-name="صالح الهبدان">
+                <img src="images/habdan.webp" alt="صورة الشيخ صالح الهبدان" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">صالح الهبدان</span>
+              </a>
+              <a href="quran-mp3/hani/index.html" class="mp3-reciter-card" data-name="هاني الرفاعي">
+                <img src="images/hani.webp" alt="صورة الشيخ هاني الرفاعي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">هاني الرفاعي</span>
+              </a>
+              <a href="quran-mp3/harthi/index.html" class="mp3-reciter-card" data-name="معيض الحارثي">
+                <img src="images/harthi.webp" alt="صورة الشيخ معيض الحارثي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">معيض الحارثي</span>
+              </a>
+              <a href="quran-mp3/hatem/index.html" class="mp3-reciter-card" data-name="حاتم فريد الواعر">
+                <img src="images/hatem.webp" alt="صورة الشيخ حاتم فريد الواعر" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">حاتم فريد الواعر</span>
+              </a>
+              <a href="quran-mp3/hawashi/index.html" class="mp3-reciter-card" data-name="أحمد الحواشي">
+                <img src="images/hawashi.webp" alt="صورة الشيخ أحمد الحواشي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">أحمد الحواشي</span>
+              </a>
+              <a href="quran-mp3/hkm/index.html" class="mp3-reciter-card" data-name="صابر عبدالحكم">
+                <img src="images/hkm.webp" alt="صورة الشيخ صابر عبدالحكم" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">صابر عبدالحكم</span>
+              </a>
+              <a href="quran-mp3/husr/index.html" class="mp3-reciter-card" data-name="محمود خليل الحصري">
+                <img src="images/husr.webp" alt="صورة الشيخ محمود خليل الحصري" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">محمود خليل الحصري</span>
+              </a>
+              <a href="quran-mp3/i_kshidan/index.html" class="mp3-reciter-card" data-name="إبراهيم كشيدان">
+                <img src="images/i_kshidan.webp" alt="صورة الشيخ إبراهيم كشيدان" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">إبراهيم كشيدان</span>
+              </a>
+              <a href="quran-mp3/ibrahim_dosri/index.html" class="mp3-reciter-card" data-name="إبراهيم الدوسري">
+                <img src="images/ibrahim_dosri.webp" alt="صورة الشيخ إبراهيم الدوسري" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">إبراهيم الدوسري</span>
+              </a>
+              <a href="quran-mp3/jamal/index.html" class="mp3-reciter-card" data-name="جمال شاكر عبدالله">
+                <img src="images/jamal.webp" alt="صورة الشيخ جمال شاكر عبدالله" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">جمال شاكر عبدالله</span>
+              </a>
+              <a href="quran-mp3/jaman/index.html" class="mp3-reciter-card" data-name="جمعان العصيمي">
+                <img src="images/jaman.webp" alt="صورة الشيخ جمعان العصيمي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">جمعان العصيمي</span>
+              </a>
+              <a href="quran-mp3/jbrl/index.html" class="mp3-reciter-card" data-name="محمد جبريل">
+                <img src="images/jbrl.webp" alt="صورة الشيخ محمد جبريل" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">محمد جبريل</span>
+              </a>
+              <a href="quran-mp3/jleel/index.html" class="mp3-reciter-card" data-name="خالد الجليل">
+                <img src="images/jleel.webp" alt="صورة الشيخ خالد الجليل" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">خالد الجليل</span>
+              </a>
+              <a href="quran-mp3/jormy/index.html" class="mp3-reciter-card" data-name="إبراهيم الجرمي">
+                <img src="images/jormy.webp" alt="صورة الشيخ إبراهيم الجرمي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">إبراهيم الجرمي</span>
+              </a>
+              <a href="quran-mp3/kafi/index.html" class="mp3-reciter-card" data-name="خالد عبدالكافي">
+                <img src="images/kafi.webp" alt="صورة الشيخ خالد عبدالكافي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">خالد عبدالكافي</span>
+              </a>
+              <a href="quran-mp3/kh_mohammadi/index.html" class="mp3-reciter-card" data-name="خالد كريم محمدي">
+                <img src="images/kh_mohammadi.webp" alt="صورة الشيخ خالد كريم محمدي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">خالد كريم محمدي</span>
+              </a>
+              <a href="quran-mp3/khalf/index.html" class="mp3-reciter-card" data-name="عبدالله الخلف">
+                <img src="images/khalf.webp" alt="صورة الشيخ عبدالله الخلف" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">عبدالله الخلف</span>
+              </a>
+              <a href="quran-mp3/khan/index.html" class="mp3-reciter-card" data-name="محمد عثمان خان">
+                <img src="images/khan.webp" alt="صورة الشيخ محمد عثمان خان" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">محمد عثمان خان</span>
+              </a>
+              <a href="quran-mp3/koshi/index.html" class="mp3-reciter-card" data-name="العيون الكوشي">
+                <img src="images/koshi.webp" alt="صورة الشيخ العيون الكوشي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">العيون الكوشي</span>
+              </a>
+              <a href="quran-mp3/lahoni/index.html" class="mp3-reciter-card" data-name="مصطفى اللاهوني">
+                <img src="images/lahoni.webp" alt="صورة الشيخ مصطفى اللاهوني" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">مصطفى اللاهوني</span>
+              </a>
+              <a href="quran-mp3/lhdan/index.html" class="mp3-reciter-card" data-name="محمد اللحيدان">
+                <img src="images/lhdan.webp" alt="صورة الشيخ محمد اللحيدان" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">محمد اللحيدان</span>
+              </a>
+              <a href="quran-mp3/m_akri/index.html" class="mp3-reciter-card" data-name="مروان العكري">
+                <img src="images/m_akri.webp" alt="صورة الشيخ مروان العكري" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">مروان العكري</span>
+              </a>
+              <a href="quran-mp3/m_krm/index.html" class="mp3-reciter-card" data-name="محمد عبدالكريم">
+                <img src="images/m_krm.webp" alt="صورة الشيخ محمد عبدالكريم" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">محمد عبدالكريم</span>
+              </a>
+              <a href="quran-mp3/m_sayed/index.html" class="mp3-reciter-card" data-name="محمد سايد">
+                <img src="images/m_sayed.webp" alt="صورة الشيخ محمد سايد" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">محمد سايد</span>
+              </a>
+              <a href="quran-mp3/mhmdfqih/index.html" class="mp3-reciter-card" data-name="محمد الفقيه">
+                <img src="images/mhmdfqih.webp" alt="صورة الشيخ محمد الفقيه" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">محمد الفقيه</span>
+              </a>
+              <a href="quran-mp3/mhsny/index.html" class="mp3-reciter-card" data-name="محمد المحيسني">
+                <img src="images/mhsny.webp" alt="صورة الشيخ محمد المحيسني" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">محمد المحيسني</span>
+              </a>
+              <a href="quran-mp3/minsh/index.html" class="mp3-reciter-card" data-name="محمد صديق المنشاوي">
+                <img src="images/minsh.webp" alt="صورة الشيخ محمد صديق المنشاوي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">محمد صديق المنشاوي</span>
+              </a>
+              <a href="quran-mp3/mohna/index.html" class="mp3-reciter-card" data-name="خالد المهنا">
+                <img src="images/mohna.webp" alt="صورة الشيخ خالد المهنا" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">خالد المهنا</span>
+              </a>
+              <a href="quran-mp3/mrifai/index.html" class="mp3-reciter-card" data-name="محمود الرفاعي">
+                <img src="images/mrifai.webp" alt="صورة الشيخ محمود الرفاعي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">محمود الرفاعي</span>
+              </a>
+              <a href="quran-mp3/mtrod/index.html" class="mp3-reciter-card" data-name="عبدالله المطرود">
+                <img src="images/mtrod.webp" alt="صورة الشيخ عبدالله المطرود" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">عبدالله المطرود</span>
+              </a>
+              <a href="quran-mp3/mustafa/index.html" class="mp3-reciter-card" data-name="مصطفى إسماعيل">
+                <img src="images/mustafa.webp" alt="صورة الشيخ مصطفى إسماعيل" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">مصطفى إسماعيل</span>
+              </a>
+              <a href="quran-mp3/mzroyee/index.html" class="mp3-reciter-card" data-name="ياسر المزروعي">
+                <img src="images/mzroyee.webp" alt="صورة الشيخ ياسر المزروعي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">ياسر المزروعي</span>
+              </a>
+              <a href="quran-mp3/nabil/index.html" class="mp3-reciter-card" data-name="نبيل الرفاعي">
+                <img src="images/nabil.webp" alt="صورة الشيخ نبيل الرفاعي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">نبيل الرفاعي</span>
+              </a>
+              <a href="quran-mp3/namh/index.html" class="mp3-reciter-card" data-name="نعمة الحسان">
+                <img src="images/namh.webp" alt="صورة الشيخ نعمة الحسان" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">نعمة الحسان</span>
+              </a>
+              <a href="quran-mp3/nasser_almajed/index.html" class="mp3-reciter-card" data-name="ناصر الماجد">
+                <img src="images/nasser_almajed.webp" alt="صورة الشيخ ناصر الماجد" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">ناصر الماجد</span>
+              </a>
+              <a href="quran-mp3/nathier/index.html" class="mp3-reciter-card" data-name="نذير المالكي">
+                <img src="images/nathier.webp" alt="صورة الشيخ نذير المالكي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">نذير المالكي</span>
+              </a>
+              <a href="quran-mp3/noah/index.html" class="mp3-reciter-card" data-name="يوسف بن نوح أحمد">
+                <img src="images/noah.webp" alt="صورة الشيخ يوسف بن نوح أحمد" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">يوسف بن نوح أحمد</span>
+              </a>
+              <a href="quran-mp3/nourin_siddig/index.html" class="mp3-reciter-card" data-name="نورين محمد صديق">
+                <img src="images/nourin_siddig.webp" alt="صورة الشيخ نورين محمد صديق" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">نورين محمد صديق</span>
+              </a>
+              <a href="quran-mp3/nufais/index.html" class="mp3-reciter-card" data-name="أحمد النفيس">
+                <img src="images/nufais.webp" alt="صورة الشيخ أحمد النفيس" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">أحمد النفيس</span>
+              </a>
+              <a href="quran-mp3/peshawa/index.html" class="mp3-reciter-card" data-name="بيشه وا قادر الكردي">
+                <img src="images/peshawa.webp" alt="صورة الشيخ بيشه وا قادر الكردي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">بيشه وا قادر الكردي</span>
+              </a>
+              <a href="quran-mp3/qari/index.html" class="mp3-reciter-card" data-name="محمد خليل القارئ">
+                <img src="images/qari.webp" alt="صورة الشيخ محمد خليل القارئ" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">محمد خليل القارئ</span>
+              </a>
+              <a href="quran-mp3/qeniwa/index.html" class="mp3-reciter-card" data-name="محمد الأمين قنيوة">
+                <img src="images/qeniwa.webp" alt="صورة الشيخ محمد الأمين قنيوة" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">محمد الأمين قنيوة</span>
+              </a>
+              <a href="quran-mp3/qht/index.html" class="mp3-reciter-card" data-name="خالد القحطاني">
+                <img src="images/qht.webp" alt="صورة الشيخ خالد القحطاني" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">خالد القحطاني</span>
+              </a>
+              <a href="quran-mp3/qtm/index.html" class="mp3-reciter-card" data-name="ناصر القطامي">
+                <img src="images/qtm.webp" alt="صورة الشيخ ناصر القطامي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">ناصر القطامي</span>
+              </a>
+              <a href="quran-mp3/qurashi/index.html" class="mp3-reciter-card" data-name="ياسر القرشي">
+                <img src="images/qurashi.webp" alt="صورة الشيخ ياسر القرشي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">ياسر القرشي</span>
+              </a>
+              <a href="quran-mp3/ra3ad/index.html" class="mp3-reciter-card" data-name="مصطفى رعد العزاوي">
+                <img src="images/ra3ad.webp" alt="صورة الشيخ مصطفى رعد العزاوي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">مصطفى رعد العزاوي</span>
+              </a>
+              <a href="quran-mp3/rami/index.html" class="mp3-reciter-card" data-name="رامي الدعيس">
+                <img src="images/rami.webp" alt="صورة الشيخ رامي الدعيس" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">رامي الدعيس</span>
+              </a>
+              <a href="quran-mp3/rashad/index.html" class="mp3-reciter-card" data-name="محمد رشاد الشريف">
+                <img src="images/rashad.webp" alt="صورة الشيخ محمد رشاد الشريف" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">محمد رشاد الشريف</span>
+              </a>
+              <a href="quran-mp3/ryan/index.html" class="mp3-reciter-card" data-name="عادل ريان">
+                <img src="images/ryan.webp" alt="صورة الشيخ عادل ريان" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">عادل ريان</span>
+              </a>
+              <a href="quran-mp3/s_bud/index.html" class="mp3-reciter-card" data-name="صلاح البدير">
+                <img src="images/s_bud.webp" alt="صورة الشيخ صلاح البدير" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">صلاح البدير</span>
+              </a>
+              <a href="quran-mp3/s_gmd/index.html" class="mp3-reciter-card" data-name="سعد الغامدي">
+                <img src="images/s_gmd.webp" alt="صورة الشيخ سعد الغامدي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">سعد الغامدي</span>
+              </a>
+              <a href="quran-mp3/s_hashemi/index.html" class="mp3-reciter-card" data-name="سيد أحمد هاشمي">
+                <img src="images/s_hashemi.webp" alt="صورة الشيخ سيد أحمد هاشمي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">سيد أحمد هاشمي</span>
+              </a>
+              <a href="quran-mp3/s_sadeiq/index.html" class="mp3-reciter-card" data-name="سلمان الصديق">
+                <img src="images/s_sadeiq.webp" alt="صورة الشيخ سلمان الصديق" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">سلمان الصديق</span>
+              </a>
+              <a href="quran-mp3/saad/index.html" class="mp3-reciter-card" data-name="سعد المقرن">
+                <img src="images/saad.webp" alt="صورة الشيخ سعد المقرن" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">سعد المقرن</span>
+              </a>
+              <a href="quran-mp3/saber/index.html" class="mp3-reciter-card" data-name="أحمد صابر">
+                <img src="images/saber.webp" alt="صورة الشيخ أحمد صابر" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">أحمد صابر</span>
+              </a>
+              <a href="quran-mp3/salah_hashim_m/index.html" class="mp3-reciter-card" data-name="صلاح الهاشم">
+                <img src="images/salah_hashim_m.webp" alt="صورة الشيخ صلاح الهاشم" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">صلاح الهاشم</span>
+              </a>
+              <a href="quran-mp3/salamah/index.html" class="mp3-reciter-card" data-name="ياسر سلامة">
+                <img src="images/salamah.webp" alt="صورة الشيخ ياسر سلامة" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">ياسر سلامة</span>
+              </a>
+              <a href="quran-mp3/sayed/index.html" class="mp3-reciter-card" data-name="سيد رمضان">
+                <img src="images/sayed.webp" alt="صورة الشيخ سيد رمضان" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">سيد رمضان</span>
+              </a>
+              <a href="quran-mp3/sds/index.html" class="mp3-reciter-card" data-name="عبدالرحمن السديس">
+                <img src="images/sds.webp" alt="صورة الشيخ عبدالرحمن السديس" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">عبدالرحمن السديس</span>
+              </a>
+              <a href="quran-mp3/shah/index.html" class="mp3-reciter-card" data-name="محمد صالح عالم شاه">
+                <img src="images/shah.webp" alt="صورة الشيخ محمد صالح عالم شاه" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">محمد صالح عالم شاه</span>
+              </a>
+              <a href="quran-mp3/shamrani/index.html" class="mp3-reciter-card" data-name="صالح الشمراني">
+                <img src="images/shamrani.webp" alt="صورة الشيخ صالح الشمراني" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">صالح الشمراني</span>
+              </a>
+              <a href="quran-mp3/shatri/index.html" class="mp3-reciter-card" data-name="أبو بكر الشاطري">
+                <img src="images/shatri.webp" alt="صورة الشيخ أبو بكر الشاطري" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">أبو بكر الشاطري</span>
+              </a>
+              <a href="quran-mp3/sheimy/index.html" class="mp3-reciter-card" data-name="محمود الشيمي">
+                <img src="images/sheimy.webp" alt="صورة الشيخ محمود الشيمي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">محمود الشيمي</span>
+              </a>
+              <a href="quran-mp3/shl/index.html" class="mp3-reciter-card" data-name="سهل ياسين">
+                <img src="images/shl.webp" alt="صورة الشيخ سهل ياسين" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">سهل ياسين</span>
+              </a>
+              <a href="quran-mp3/shur/index.html" class="mp3-reciter-card" data-name="سعود الشريم">
+                <img src="images/shur.webp" alt="صورة الشيخ سعود الشريم" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">سعود الشريم</span>
+              </a>
+              <a href="quran-mp3/soufi/index.html" class="mp3-reciter-card" data-name="رشيد صوفي">
+                <img src="images/soufi.webp" alt="صورة الشيخ رشيد صوفي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">رشيد صوفي</span>
+              </a>
+              <a href="quran-mp3/taher/index.html" class="mp3-reciter-card" data-name="شيرزاد عبدالرحمن طاهر">
+                <img src="images/taher.webp" alt="صورة الشيخ شيرزاد عبدالرحمن طاهر" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">شيرزاد عبدالرحمن طاهر</span>
+              </a>
+              <a href="quran-mp3/tareq/index.html" class="mp3-reciter-card" data-name="طارق عبدالغني دعوب">
+                <img src="images/tareq.webp" alt="صورة الشيخ طارق عبدالغني دعوب" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">طارق عبدالغني دعوب</span>
+              </a>
+              <a href="quran-mp3/tblawi/index.html" class="mp3-reciter-card" data-name="محمد الطبلاوي">
+                <img src="images/tblawi.webp" alt="صورة الشيخ محمد الطبلاوي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">محمد الطبلاوي</span>
+              </a>
+              <a href="quran-mp3/thubti/index.html" class="mp3-reciter-card" data-name="عبدالباري الثبيتي">
+                <img src="images/thubti.webp" alt="صورة الشيخ عبدالباري الثبيتي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">عبدالباري الثبيتي</span>
+              </a>
+              <a href="quran-mp3/tnjy/index.html" class="mp3-reciter-card" data-name="خليفة الطنيجي">
+                <img src="images/tnjy.webp" alt="صورة الشيخ خليفة الطنيجي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">خليفة الطنيجي</span>
+              </a>
+              <a href="quran-mp3/twfeeq/index.html" class="mp3-reciter-card" data-name="توفيق الصايغ">
+                <img src="images/twfeeq.webp" alt="صورة الشيخ توفيق الصايغ" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">توفيق الصايغ</span>
+              </a>
+              <a href="quran-mp3/waleed/index.html" class="mp3-reciter-card" data-name="وليد النائحي">
+                <img src="images/waleed.webp" alt="صورة الشيخ وليد النائحي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">وليد النائحي</span>
+              </a>
+              <a href="quran-mp3/wdee3/index.html" class="mp3-reciter-card" data-name="وديع اليمني">
+                <img src="images/wdee3.webp" alt="صورة الشيخ وديع اليمني" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">وديع اليمني</span>
+              </a>
+              <a href="quran-mp3/yahya/index.html" class="mp3-reciter-card" data-name="يحيى حوا">
+                <img src="images/yahya.webp" alt="صورة الشيخ يحيى حوا" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">يحيى حوا</span>
+              </a>
+              <a href="quran-mp3/yasser/index.html" class="mp3-reciter-card" data-name="ياسر الدوسري">
+                <img src="images/yasser.webp" alt="صورة الشيخ ياسر الدوسري" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">ياسر الدوسري</span>
+              </a>
+              <a href="quran-mp3/yousef/index.html" class="mp3-reciter-card" data-name="يوسف بن نوح أحمد">
+                <img src="images/yousef.webp" alt="صورة الشيخ يوسف بن نوح أحمد" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">يوسف بن نوح أحمد</span>
+              </a>
+              <a href="quran-mp3/zaki/index.html" class="mp3-reciter-card" data-name="زكي داغستاني">
+                <img src="images/zaki.webp" alt="صورة الشيخ زكي داغستاني" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">زكي داغستاني</span>
+              </a>
+              <a href="quran-mp3/islam/index.html" class="mp3-reciter-card" data-name="إسلام صبحي">
+                <img src="images/islam.webp" alt="صورة الشيخ إسلام صبحي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">إسلام صبحي</span>
+              </a>
+              <a href="quran-mp3/mansour/index.html" class="mp3-reciter-card" data-name="منصور السالمي">
+                <img src="images/mansour.webp" alt="صورة الشيخ منصور السالمي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">منصور السالمي</span>
+              </a>
+              <a href="quran-mp3/zaml/index.html" class="mp3-reciter-card" data-name="ماجد الزامل">
+                <img src="images/zaml.webp" alt="صورة الشيخ ماجد الزامل" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">ماجد الزامل</span>
+              </a>
+              <a href="quran-mp3/shaheen/index.html" class="mp3-reciter-card" data-name="أحمد خليل شاهين">
+                <img src="images/shaheen.webp" alt="صورة الشيخ أحمد خليل شاهين" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">أحمد خليل شاهين</span>
+              </a>
+              <a href="quran-mp3/kayat/index.html" class="mp3-reciter-card" data-name="عبد الله خياط">
+                <img src="images/kayat.webp" alt="صورة الشيخ عبد الله خياط" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">عبد الله خياط</span>
+              </a>
+              <a href="quran-mp3/maher/index.html" class="mp3-reciter-card" data-name="ماهر المعيقلي">
+                <img src="images/maher.webp" alt="صورة الشيخ ماهر المعيقلي" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">ماهر المعيقلي</span>
+              </a>
+              <a href="quran-mp3/jhn/index.html" class="mp3-reciter-card" data-name="عبد الله الجهني">
+                <img src="images/jhn.webp" alt="صورة الشيخ عبد الله الجهني" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">عبد الله الجهني</span>
+              </a>
+              <a href="quran-mp3/zahrani/index.html" class="mp3-reciter-card" data-name="عبد العزيز الزهراني">
+                <img src="images/zahrani.webp" alt="صورة الشيخ عبد العزيز الزهراني" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">عبد العزيز الزهراني</span>
+              </a>
+              <a href="quran-mp3/ali/index.html" class="mp3-reciter-card" data-name="علي جابر">
+                <img src="images/ali.webp" alt="صورة الشيخ علي جابر" class="reciter-photo" loading="lazy">
+                <span class="reciter-name">علي جابر</span>
+              </a>
+            </div>
+          </section>
+
+          <section class="mp3-info" aria-labelledby="about-mp3">
+            <h2 id="about-mp3">القرآن الكريم صوت MP3</h2>
+            <p>
+              تضم هذه المكتبة تلاوات القرآن الكريم مرتبة حسب القارئ، وتحتوي صفحة كل قارئ على سور القرآن الكريم من سورة الفاتحة إلى سورة الناس. يمكنك الدخول إلى صفحة القارئ ثم اختيار السورة المطلوبة للاستماع إليها.
+            </p>
+          </section>
+
+        </article>
+      </div>
+
+      <aside class="sidebar">
+
+        <div class="download-quran">القرآن الكريم</div>
+
+        <div class="mushaf-section">
+          <a href="quran-pdf.html">
+            <img src="images/hafs.webp" alt="تحميل القرآن الكريم">
+            <p class="mushaf-caption">إصدارات مصحف حفص PDF</p>
+          </a>
+        </div>
+
+        <hr class="separator">
+
+        <div class="download-quran">روابط مهمة</div>
+
+        <div class="sidebar-links">
+          <ul>
+            <li><a href="fahras.html">فهرس السور</a></li>
+            <li><a href="quran-pdf.html">تحميل القرآن PDF</a></li>
+            <li><a href="quran-mp3.html">الاستماع إلى القرآن</a></li>
+          </ul>
+        </div>
+
+      </aside>
+
+    </main>
+  </div>
+
+  <footer>
+    <div class="page-wrapper">
+      <p>© موقع القرآن الكريم</p>
+    </div>
+  </footer>
+
+  <script src="dark-mode.js" defer></script>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var filter = document.querySelector('.alphabet-filter');
+      var cards = document.querySelectorAll('.reciters-grid .mp3-reciter-card');
+      var emptyMessage = document.getElementById('alphabet-empty');
+
+      if (!filter || !cards.length) return;
+
+      function normalizeArabic(value) {
+        return (value || '')
+          .trim()
+          .replace(/[\u064B-\u065F\u0670]/g, '')
+          .replace(/[أإآٱ]/g, 'ا')
+          .replace(/ى/g, 'ي');
+      }
+
+      filter.addEventListener('click', function (event) {
+        var button = event.target.closest('button[data-letter]');
+        if (!button) return;
+
+        var selected = button.getAttribute('data-letter');
+        var buttons = filter.querySelectorAll('button[data-letter]');
+        var visibleCount = 0;
+
+        buttons.forEach(function (item) {
+          item.classList.toggle('active', item === button);
+        });
+
+        cards.forEach(function (card) {
+          var nameElement = card.querySelector('.reciter-name');
+          var name = normalizeArabic(nameElement ? nameElement.textContent : '');
+          var show = selected === 'all' || name.charAt(0) === selected;
+
+          card.hidden = !show;
+          if (show) visibleCount++;
+        });
+
+        if (emptyMessage) {
+          emptyMessage.style.display = visibleCount > 0 ? 'none' : 'block';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
+

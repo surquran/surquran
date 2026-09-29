@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>أدعية النبي ﷺ من السنة النبوية</title>
+  <meta name="description" content="مجموعة من أدعية النبي صلى الله عليه وسلم الصحيحة والمأثورة من السنة النبوية، مكتوبة بوضوح مع مصادرها.">
+  <meta name="robots" content="index,follow">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .duas-content { min-width: 0; }
+    .duas-page { width: 100%; }
+    .duas-intro {
+      margin: 0 auto 28px;
+      color: #555;
+      font-size: 18px;
+      line-height: 1.9;
+      text-align: center;
+    }
+    .duas-banner {
+      position: relative;
+      min-height: 220px;
+      margin-bottom: 25px;
+      overflow: hidden;
+      border-radius: 22px;
+      background:
+        radial-gradient(circle at 18% 22%, rgba(255,244,176,.95) 0 32px, transparent 33px),
+        linear-gradient(135deg, #536ca4 0%, #2f416f 52%, #182341 100%);
+      box-shadow: 0 10px 30px rgba(32,42,72,.15);
+      color: #fff;
+      isolation: isolate;
+    }
+    .duas-banner::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(circle at 75% 18%, rgba(255,255,255,.25) 0 2px, transparent 3px),
+        radial-gradient(circle at 84% 35%, rgba(255,255,255,.20) 0 1px, transparent 2px),
+        linear-gradient(90deg, rgba(0,0,0,.02), rgba(0,0,0,.20));
+    }
+    .banner-decor {
+      position: absolute;
+      left: 8%;
+      bottom: -50px;
+      width: 175px;
+      height: 175px;
+      border: 3px solid rgba(255,255,255,.28);
+      border-radius: 50%;
+      box-shadow: 0 0 0 18px rgba(255,255,255,.08), 0 0 0 38px rgba(255,255,255,.05);
+    }
+    .duas-banner-text {
+      min-height: 220px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .duas-banner h2 {
+      margin: 0 0 9px;
+      color: #fff;
+      font-size: clamp(29px, 5vw, 45px);
+      line-height: 1.4;
+      text-shadow: 0 2px 8px rgba(0,0,0,.22);
+    }
+    .duas-banner p { margin: 0; color: #fff; font-size: 18px; }
+    .duas-list { display: grid; gap: 16px; }
+    .dua-card {
+      position: relative;
+      padding: 25px 24px 20px;
+      overflow: hidden;
+      border: 1px solid #e4e4e4;
+      border-radius: 18px;
+      background: #fafafa;
+      box-shadow: 0 5px 18px rgba(23,31,56,.05);
+    }
+    .dua-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 5px;
+      height: 100%;
+      background: #465b91;
+    }
+    .dua-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      margin-bottom: 12px;
+      border-radius: 50%;
+      background: #465b91;
+      color: #fff;
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .dua-text {
+      margin: 0;
+      color: #17203b;
+      font-size: 20px;
+      font-weight: 600;
+      line-height: 2.05;
+      text-align: right;
+    }
+    .dua-source {
+      display: inline-flex;
+      margin-top: 15px;
+      padding: 5px 14px;
+      border-radius: 999px;
+      background: #eef1f8;
+      color: #394c7b;
+      font-size: 14px;
+      font-weight: 700;
+    }
+    .duas-note {
+      margin: 24px 0 0;
+      padding: 17px 18px;
+      border-radius: 14px;
+      background: #fff8e8;
+      color: #62471f;
+      line-height: 1.9;
+      text-align: center;
+    }
+    .dua-opening {
+      margin: 0 0 24px;
+      padding: 20px 22px;
+      border: 1px solid #ead8ae;
+      border-right: 5px solid #e39d3d;
+      border-radius: 16px;
+      background: #fff8e8;
+      color: #4f3b1d;
+      font-size: 19px;
+      font-weight: 700;
+      line-height: 2;
+      text-align: center;
+    }
+    .dua-opening cite {
+      display: block;
+      margin-top: 7px;
+      color: #795d2e;
+      font-size: 17px;
+      font-style: normal;
+    }
+    @media (max-width: 900px) {
+      html, body { width: 100%; max-width: 100%; overflow-x: hidden; }
+      .page-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 14px !important;
+        box-sizing: border-box !important;
+      }
+      main {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 20px auto !important;
+        padding: 0 !important;
+        flex-direction: column !important;
+        gap: 24px !important;
+        box-sizing: border-box !important;
+      }
+      .content, .duas-content, .duas-page, .sidebar {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+      }
+    }
+    @media (max-width: 560px) {
+      .duas-banner, .duas-banner-text { min-height: 175px; }
+      .duas-banner { border-radius: 16px; }
+      .duas-banner-text { padding: 22px 16px; }
+      .duas-banner p { font-size: 15px; }
+      .dua-card { padding: 20px 18px 17px; border-radius: 14px; }
+      .dua-text { font-size: 18px; line-height: 1.95; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="images/QuranLogo.webp" alt="موقع القرآن الكريم">
+      </a>
+      <nav class="main-nav" aria-label="القائمة الرئيسية">
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="fahras.html">فهرس القرآن الكريم</a></li>
+          <li class="dropdown">
+            <a href="quran-pdf.html">القرآن الكريم PDF ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="quran-pdf/mashaf-almadinat.html">مصحف المدينة المنورة</a></li>
+              <li><a href="quran-pdf/juza-eam.html">جزء عم</a></li>
+              <li><a href="quran-pdf/juza-tabarak.html">جزء تبارك</a></li>
+              <li><a href="quran-pdf/juza-qadsamie.html">جزء قد سمع</a></li>
+              <li><a href="quran-pdf/rube-ys.html">ربع يس</a></li>
+            </ul>
+          </li>
+          <li><a href="quran-mp3.html">القرآن الكريم MP3</a></li>
+          <li><a href="contact.html">اتصل بنا</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <header class="page-header">
+    <div class="page-wrapper"><h1>أدعية النبي ﷺ</h1></div>
+  </header>
+
+  <div class="page-wrapper">
+    <main>
+      <div class="content duas-content">
+        <article class="duas-page">
+          <p class="duas-intro">مجموعة من الأدعية الجامعة المأثورة عن النبي صلى الله عليه وسلم، مرتبة في قائمة واحدة لسهولة القراءة والدعاء بها.</p>
+
+          <div class="dua-opening">
+            ابدأ دعاءك بقول الحمد لله، كما ورد عن النبي صلى الله عليه وسلم أنه قال:
+            <cite>«أفضلُ الذِّكرِ: لا إله إلا اللهُ، وأفضلُ الدعاءِ: الحمدُ للهِ».</cite>
+          </div>
+
+          <div class="duas-banner" role="img" aria-label="أدعية النبي صلى الله عليه وسلم">
+            <span class="banner-decor" aria-hidden="true"></span>
+            <div class="duas-banner-text">
+              <h2>أدعية النبي ﷺ</h2>
+              <p>أدعية جامعة من السنة النبوية</p>
+            </div>
+          </div>
+
+          <div class="duas-list">
+            <div class="dua-card"><span class="dua-number">1</span><p class="dua-text">اللَّهُمَّ رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً، وَفِي الْآخِرَةِ حَسَنَةً، وَقِنَا عَذَابَ النَّارِ.</p><span class="dua-source">متفق عليه</span></div>
+            <div class="dua-card"><span class="dua-number">2</span><p class="dua-text">اللَّهُمَّ إِنِّي أَسْأَلُكَ الْهُدَى، وَالتُّقَى، وَالْعَفَافَ، وَالْغِنَى.</p><span class="dua-source">رواه مسلم</span></div>
+            <div class="dua-card"><span class="dua-number">3</span><p class="dua-text">اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ، وَشُكْرِكَ، وَحُسْنِ عِبَادَتِكَ.</p><span class="dua-source">رواه أبو داود والنسائي</span></div>
+            <div class="dua-card"><span class="dua-number">4</span><p class="dua-text">يَا مُقَلِّبَ الْقُلُوبِ، ثَبِّتْ قَلْبِي عَلَى دِينِكَ.</p><span class="dua-source">رواه الترمذي</span></div>
+            <div class="dua-card"><span class="dua-number">5</span><p class="dua-text">اللَّهُمَّ مُصَرِّفَ الْقُلُوبِ، صَرِّفْ قُلُوبَنَا عَلَى طَاعَتِكَ.</p><span class="dua-source">رواه مسلم</span></div>
+            <div class="dua-card"><span class="dua-number">6</span><p class="dua-text">اللَّهُمَّ إِنِّي ظَلَمْتُ نَفْسِي ظُلْمًا كَثِيرًا، وَلَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ، فَاغْفِرْ لِي مَغْفِرَةً مِنْ عِنْدِكَ، وَارْحَمْنِي، إِنَّكَ أَنْتَ الْغَفُورُ الرَّحِيمُ.</p><span class="dua-source">متفق عليه</span></div>
+            <div class="dua-card"><span class="dua-number">7</span><p class="dua-text">اللَّهُمَّ اغْفِرْ لِي، وَارْحَمْنِي، وَاهْدِنِي، وَعَافِنِي، وَارْزُقْنِي.</p><span class="dua-source">رواه مسلم</span></div>
+            <div class="dua-card"><span class="dua-number">8</span><p class="dua-text">اللَّهُمَّ اغْفِرْ لِي ذَنْبِي كُلَّهُ، دِقَّهُ وَجِلَّهُ، وَأَوَّلَهُ وَآخِرَهُ، وَعَلَانِيَتَهُ وَسِرَّهُ.</p><span class="dua-source">رواه مسلم</span></div>
+            <div class="dua-card"><span class="dua-number">9</span><p class="dua-text">اللَّهُمَّ إِنَّكَ عَفُوٌّ تُحِبُّ الْعَفْوَ، فَاعْفُ عَنِّي.</p><span class="dua-source">رواه الترمذي</span></div>
+            <div class="dua-card"><span class="dua-number">10</span><p class="dua-text">اللَّهُمَّ اهْدِنِي وَسَدِّدْنِي.</p><span class="dua-source">رواه مسلم</span></div>
+            <div class="dua-card"><span class="dua-number">11</span><p class="dua-text">اللَّهُمَّ أَصْلِحْ لِي دِينِيَ الَّذِي هُوَ عِصْمَةُ أَمْرِي، وَأَصْلِحْ لِي دُنْيَايَ الَّتِي فِيهَا مَعَاشِي، وَأَصْلِحْ لِي آخِرَتِيَ الَّتِي فِيهَا مَعَادِي، وَاجْعَلِ الْحَيَاةَ زِيَادَةً لِي فِي كُلِّ خَيْرٍ، وَاجْعَلِ الْمَوْتَ رَاحَةً لِي مِنْ كُلِّ شَرٍّ.</p><span class="dua-source">رواه مسلم</span></div>
+            <div class="dua-card"><span class="dua-number">12</span><p class="dua-text">اللَّهُمَّ آتِ نَفْسِي تَقْوَاهَا، وَزَكِّهَا أَنْتَ خَيْرُ مَنْ زَكَّاهَا، أَنْتَ وَلِيُّهَا وَمَوْلَاهَا.</p><span class="dua-source">رواه مسلم</span></div>
+            <div class="dua-card"><span class="dua-number">13</span><p class="dua-text">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ، وَالْعَجْزِ وَالْكَسَلِ، وَالْجُبْنِ وَالْبُخْلِ، وَضَلَعِ الدَّيْنِ، وَغَلَبَةِ الرِّجَالِ.</p><span class="dua-source">رواه البخاري</span></div>
+            <div class="dua-card"><span class="dua-number">14</span><p class="dua-text">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْعَجْزِ وَالْكَسَلِ، وَالْجُبْنِ وَالْهَرَمِ وَالْبُخْلِ، وَأَعُوذُ بِكَ مِنْ عَذَابِ الْقَبْرِ، وَمِنْ فِتْنَةِ الْمَحْيَا وَالْمَمَاتِ.</p><span class="dua-source">متفق عليه</span></div>
+            <div class="dua-card"><span class="dua-number">15</span><p class="dua-text">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ زَوَالِ نِعْمَتِكَ، وَتَحَوُّلِ عَافِيَتِكَ، وَفُجَاءَةِ نِقْمَتِكَ، وَجَمِيعِ سَخَطِكَ.</p><span class="dua-source">رواه مسلم</span></div>
+            <div class="dua-card"><span class="dua-number">16</span><p class="dua-text">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ مُنْكَرَاتِ الْأَخْلَاقِ، وَالْأَعْمَالِ، وَالْأَهْوَاءِ.</p><span class="dua-source">رواه الترمذي</span></div>
+            <div class="dua-card"><span class="dua-number">17</span><p class="dua-text">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ عِلْمٍ لَا يَنْفَعُ، وَمِنْ قَلْبٍ لَا يَخْشَعُ، وَمِنْ نَفْسٍ لَا تَشْبَعُ، وَمِنْ دَعْوَةٍ لَا يُسْتَجَابُ لَهَا.</p><span class="dua-source">رواه مسلم</span></div>
+            <div class="dua-card"><span class="dua-number">18</span><p class="dua-text">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ شَرِّ مَا عَمِلْتُ، وَمِنْ شَرِّ مَا لَمْ أَعْمَلْ.</p><span class="dua-source">رواه مسلم</span></div>
+            <div class="dua-card"><span class="dua-number">19</span><p class="dua-text">اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنَ الْخَيْرِ كُلِّهِ، عَاجِلِهِ وَآجِلِهِ، مَا عَلِمْتُ مِنْهُ وَمَا لَمْ أَعْلَمْ، وَأَعُوذُ بِكَ مِنَ الشَّرِّ كُلِّهِ، عَاجِلِهِ وَآجِلِهِ، مَا عَلِمْتُ مِنْهُ وَمَا لَمْ أَعْلَمْ. اللَّهُمَّ إِنِّي أَسْأَلُكَ الْجَنَّةَ وَمَا قَرَّبَ إِلَيْهَا مِنْ قَوْلٍ أَوْ عَمَلٍ، وَأَعُوذُ بِكَ مِنَ النَّارِ وَمَا قَرَّبَ إِلَيْهَا مِنْ قَوْلٍ أَوْ عَمَلٍ، وَأَسْأَلُكَ أَنْ تَجْعَلَ كُلَّ قَضَاءٍ قَضَيْتَهُ لِي خَيْرًا.</p><span class="dua-source">رواه ابن ماجه</span></div>
+            <div class="dua-card"><span class="dua-number">20</span><p class="dua-text">اللَّهُمَّ اجْعَلْ فِي قَلْبِي نُورًا، وَفِي بَصَرِي نُورًا، وَفِي سَمْعِي نُورًا، وَعَنْ يَمِينِي نُورًا، وَعَنْ يَسَارِي نُورًا، وَفَوْقِي نُورًا، وَتَحْتِي نُورًا، وَأَمَامِي نُورًا، وَخَلْفِي نُورًا، وَعَظِّمْ لِي نُورًا.</p><span class="dua-source">رواه مسلم</span></div>
+            <div class="dua-card"><span class="dua-number">21</span><p class="dua-text">اللَّهُمَّ رَحْمَتَكَ أَرْجُو، فَلَا تَكِلْنِي إِلَى نَفْسِي طَرْفَةَ عَيْنٍ، وَأَصْلِحْ لِي شَأْنِي كُلَّهُ، لَا إِلَهَ إِلَّا أَنْتَ.</p><span class="dua-source">رواه أبو داود</span></div>
+            <div class="dua-card"><span class="dua-number">22</span><p class="dua-text">اللَّهُمَّ إِنِّي أَعُوذُ بِرِضَاكَ مِنْ سَخَطِكَ، وَبِمُعَافَاتِكَ مِنْ عُقُوبَتِكَ، وَأَعُوذُ بِكَ مِنْكَ، لَا أُحْصِي ثَنَاءً عَلَيْكَ، أَنْتَ كَمَا أَثْنَيْتَ عَلَى نَفْسِكَ.</p><span class="dua-source">رواه مسلم</span></div>
+            <div class="dua-card"><span class="dua-number">23</span><p class="dua-text">رَبِّ أَعِنِّي وَلَا تُعِنْ عَلَيَّ، وَانْصُرْنِي وَلَا تَنْصُرْ عَلَيَّ، وَامْكُرْ لِي وَلَا تَمْكُرْ عَلَيَّ، وَاهْدِنِي وَيَسِّرِ الْهُدَى لِي، وَانْصُرْنِي عَلَى مَنْ بَغَى عَلَيَّ. رَبِّ اجْعَلْنِي لَكَ شَكَّارًا، لَكَ ذَكَّارًا، لَكَ رَهَّابًا، لَكَ مِطْوَاعًا، لَكَ مُخْبِتًا، إِلَيْكَ أَوَّاهًا مُنِيبًا. رَبِّ تَقَبَّلْ تَوْبَتِي، وَاغْسِلْ حَوْبَتِي، وَأَجِبْ دَعْوَتِي، وَثَبِّتْ حُجَّتِي، وَسَدِّدْ لِسَانِي، وَاهْدِ قَلْبِي، وَاسْلُلْ سَخِيمَةَ صَدْرِي.</p><span class="dua-source">رواه أبو داود والترمذي</span></div>
+            <div class="dua-card"><span class="dua-number">24</span><p class="dua-text">اللَّهُمَّ اغْفِرْ لِي خَطِيئَتِي وَجَهْلِي، وَإِسْرَافِي فِي أَمْرِي، وَمَا أَنْتَ أَعْلَمُ بِهِ مِنِّي. اللَّهُمَّ اغْفِرْ لِي جِدِّي وَهَزْلِي، وَخَطَئِي وَعَمْدِي، وَكُلُّ ذَلِكَ عِنْدِي. اللَّهُمَّ اغْفِرْ لِي مَا قَدَّمْتُ وَمَا أَخَّرْتُ، وَمَا أَسْرَرْتُ وَمَا أَعْلَنْتُ، وَمَا أَنْتَ أَعْلَمُ بِهِ مِنِّي، أَنْتَ الْمُقَدِّمُ وَأَنْتَ الْمُؤَخِّرُ، وَأَنْتَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ.</p><span class="dua-source">متفق عليه</span></div>
+            <div class="dua-card"><span class="dua-number">25</span><p class="dua-text">اللَّهُمَّ لَكَ أَسْلَمْتُ، وَبِكَ آمَنْتُ، وَعَلَيْكَ تَوَكَّلْتُ، وَإِلَيْكَ أَنَبْتُ، وَبِكَ خَاصَمْتُ. اللَّهُمَّ إِنِّي أَعُوذُ بِعِزَّتِكَ، لَا إِلَهَ إِلَّا أَنْتَ، أَنْ تُضِلَّنِي، أَنْتَ الْحَيُّ الَّذِي لَا يَمُوتُ، وَالْجِنُّ وَالْإِنْسُ يَمُوتُونَ.</p><span class="dua-source">متفق عليه</span></div>
+          </div>
+
+          <p class="duas-note">يجوز للمسلم أن يدعو بهذه الأدعية في كل وقت، ويتحرى أوقات الإجابة مع حضور القلب وحسن الظن بالله.</p>
+        </article>
+      </div>
+
+      <aside class="sidebar">
+        <div class="download-quran">القرآن الكريم</div>
+        <div class="mushaf-section">
+          <a href="quran-pdf.html">
+            <img src="images/hafs.webp" alt="تحميل القرآن الكريم">
+            <p class="mushaf-caption">إصدارات مصحف حفص PDF</p>
+          </a>
+        </div>
+
+        <hr class="separator">
+        <div class="download-quran">روابط مهمة</div>
+        <div class="sidebar-links">
+          <ul>
+            <li><a href="fahras.html">فهرس السور</a></li>
+            <li><a href="quran-pdf.html">تحميل القرآن PDF</a></li>
+            <li><a href="quran-mp3.html">الاستماع إلى القرآن</a></li>
+          </ul>
+        </div>
+
+        <hr class="separator">
+        <div class="download-quran">أشهر القراء</div>
+        <div class="reciters">
+          <a href="quran-mp3/sds/1.html" class="reciter"><img src="images/sds.webp" alt="عبدالرحمن السديس" loading="lazy"><span>عبدالرحمن السديس</span></a>
+          <a href="quran-mp3/shur/1.html" class="reciter"><img src="images/shur.webp" alt="سعود الشريم" loading="lazy"><span>سعود الشريم</span></a>
+          <a href="quran-mp3/minsh/1.html" class="reciter"><img src="images/minsh.webp" alt="محمد صديق المنشاوي" loading="lazy"><span>محمد صديق المنشاوي</span></a>
+          <a href="quran-mp3/afs/1.html" class="reciter"><img src="images/afs.webp" alt="مشاري العفاسي" loading="lazy"><span>مشاري العفاسي</span></a>
+          <a href="quran-mp3/ajm/1.html" class="reciter"><img src="images/ajm.webp" alt="أحمد بن علي العجمي" loading="lazy"><span>أحمد بن علي العجمي</span></a>
+          <a href="quran-mp3/basit/1.html" class="reciter"><img src="images/basit.webp" alt="عبدالباسط عبدالصمد" loading="lazy"><span>عبدالباسط عبدالصمد</span></a>
+          <a href="quran-mp3/s_gmd/1.html" class="reciter"><img src="images/s_gmd.webp" alt="سعد الغامدي" loading="lazy"><span>سعد الغامدي</span></a>
+          <a href="quran-mp3/yasser/1.html" class="reciter"><img src="images/yasser.webp" alt="ياسر الدوسري" loading="lazy"><span>ياسر الدوسري</span></a>
+        </div>
+
+        <hr class="separator">
+        <div class="download-quran">ذكر ودعاء</div>
+        <div class="sidebar-links">
+          <ul>
+            <li><a href="azkar.html">أذكار الصباح والمساء</a></li>
+            <li><a href="duas.html" aria-current="page">أدعية النبي ﷺ</a></li>
+            <li><a href="ruqia.html">الرقية الشرعية</a></li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <footer><div class="page-wrapper"><p>© موقع القرآن الكريم</p></div></footer>
+  <script src="dark-mode.js" defer></script>
+</body>
+</html>
+

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>سورة التوبة بصوت الشيخ مروان العكري MP3</title>
+  <meta name="description" content="استمع إلى سورة التوبة بصوت الشيخ مروان العكري مع إمكانية التحميل المباشر للسورة بصيغة MP3">
+  <meta name="robots" content="index,follow">
+
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/quran-mp3.css">
+
+  <style>
+    .surah-audio-card {
+      max-width: 760px;
+      margin: 0 auto 32px;
+      padding: 28px;
+      border: 1px solid #e2e2e2;
+      border-radius: 14px;
+      background: #fff;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .surah-reciter-image {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 18px;
+    }
+
+    .surah-audio-card h2 { margin: 8px 0 12px; }
+
+    .surah-description {
+      margin: 0 auto 22px;
+      max-width: 680px;
+      line-height: 1.9;
+    }
+
+    .surah-audio-player {
+      width: 100%;
+      max-width: 650px;
+      display: block;
+      margin: 0 auto 16px;
+    }
+
+    .download-mp3-btn {
+      display: inline-block;
+      margin: 4px auto 8px;
+      padding: 12px 22px;
+      border-radius: 10px;
+      background: #1f7a5c;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .download-mp3-btn:hover { opacity: .9; }
+
+    .surah-nav {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .surah-nav a, .surah-nav span {
+      flex: 1;
+      text-decoration: none;
+      padding: 10px 14px;
+    }
+
+    .surah-nav .disabled { opacity: .45; }
+
+    .other-surahs-section { margin-top: 34px; }
+
+    .other-surahs-section h2 { margin-bottom: 20px; }
+
+    .other-surahs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0;
+      border-top: 1px solid #dedede;
+      border-right: 1px solid #dedede;
+    }
+
+    .other-surah-link {
+      display: block;
+      padding: 12px 10px;
+      border: 0;
+      border-left: 1px solid #dedede;
+      border-bottom: 1px solid #dedede;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .same-surah-reciters-section {
+      margin-top: 40px;
+    }
+
+    .same-surah-reciters-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      border: 0;
+    }
+
+    .same-surah-reciter-link {
+      display: flex;
+      min-height: 190px;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 12px;
+      box-sizing: border-box;
+      background: #FAFAFA;
+      border: 1px solid #e4e4e4;
+      border-radius: 12px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .same-surah-reciter-image {
+      display: block;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .same-surah-reciter-link span {
+      display: block;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .surah-audio-card { padding: 20px 14px; }
+      .surah-reciter-image { width: 110px; height: 110px; }
+      .surah-nav { flex-direction: column; }
+      .same-surah-reciters-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 420px) {
+      .surah-index-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .same-surah-reciters-grid { grid-template-columns: 1fr; }
+      .same-surah-reciter-link { min-height: 170px; }
+      .same-surah-reciter-image { width: 105px; height: 105px; }
+    }
+
+    @media (max-width: 900px) {
+      html, body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
+      .page-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 14px !important;
+        left: 0 !important;
+        position: static !important;
+        box-sizing: border-box !important;
+      }
+
+      main {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 20px auto !important;
+        padding: 0 !important;
+        flex-direction: column !important;
+        gap: 24px !important;
+        box-sizing: border-box;
+      }
+
+      .content, .mp3-content, .mp3-page, .sidebar {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+      }
+
+      .surah-audio-card,
+      .surah-audio-player {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="main-header">
+    <div class="container">
+      <a href="../../index.html" class="logo">
+        <img src="../../images/QuranLogo.webp" alt="موقع القرآن الكريم">
+      </a>
+
+      <nav class="main-nav" aria-label="القائمة الرئيسية">
+        <ul>
+          <li><a href="../../index.html">الرئيسية</a></li>
+          <li><a href="../../fahras.html">فهرس القرآن الكريم</a></li>
+
+          <li class="dropdown">
+            <a href="../../quran-pdf.html">القرآن الكريم PDF ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="../../quran-pdf/mashaf-almadinat.html">مصحف المدينة المنورة</a></li>
+              <li><a href="../../quran-pdf/juza-eam.html">جزء عم</a></li>
+              <li><a href="../../quran-pdf/juza-tabarak.html">جزء تبارك</a></li>
+              <li><a href="../../quran-pdf/juza-qadsamie.html">جزء قد سمع</a></li>
+              <li><a href="../../quran-pdf/rube-ys.html">ربع يس</a></li>
+            </ul>
+          </li>
+
+          <li><a href="../../quran-mp3.html" aria-current="page">القرآن الكريم MP3</a></li>
+          <li><a href="../../contact.html">اتصل بنا</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <header class="page-header">
+    <div class="page-wrapper">
+      <h1>سورة التوبة بصوت الشيخ مروان العكري</h1>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <main>
+
+      <div class="content mp3-content">
+        <article class="mp3-page">
+
+          <div class="surah-audio-card">
+
+            <img
+              class="surah-reciter-image"
+              src="../../images/m_akri.webp"
+              alt="صورة الشيخ مروان العكري"
+              loading="lazy">
+
+            <h2>سورة التوبة بصوت الشيخ مروان العكري</h2>
+
+            <p class="surah-description">
+              الاستماع لسورة التوبة بصوت الشيخ مروان العكري
+              مع إمكانية التحميل المباشر للسورة بصيغة MP3
+            </p>
+
+            <!--
+              لا نستخدم
+              حتى يبقى خيار Download متاحاً من قائمة الثلاث نقاط
+              في المتصفحات التي تدعم ذلك.
+            -->
+            <audio class="surah-audio-player" controls autoplay preload="auto">
+              <source src="../../mp3/m_akri/9.mp3" type="audio/mpeg">
+              متصفحك لا يدعم تشغيل ملفات الصوت.
+            </audio>
+
+            <a class="download-mp3-btn" href="../../mp3/m_akri/9.mp3" download>
+              تحميل سورة التوبة MP3
+            </a>
+
+            <nav class="surah-nav" aria-label="التنقل بين السور">
+              <a class="previous-surah" href="8.html">→ سورة الأنفال</a>
+              <a class="next-surah" href="10.html">سورة يونس ←</a>
+            </nav>
+
+          </div>
+
+          <section class="other-surahs-section" aria-labelledby="other-surahs-title">
+            <h2 id="other-surahs-title">سور أخرى بصوت الشيخ مروان العكري</h2>
+            <div class="other-surahs-grid surah-index-grid">
+              <a class="other-surah-link" href="75.html">سورة القيامة</a>
+              <a class="other-surah-link" href="109.html">سورة الكافرون</a>
+              <a class="other-surah-link" href="104.html">سورة الهمزة</a>
+              <a class="other-surah-link" href="80.html">سورة عبس</a>
+              <a class="other-surah-link" href="36.html">سورة يس</a>
+              <a class="other-surah-link" href="95.html">سورة التين</a>
+              <a class="other-surah-link" href="78.html">سورة النبأ</a>
+              <a class="other-surah-link" href="77.html">سورة المرسلات</a>
+              <a class="other-surah-link" href="17.html">سورة الإسراء</a>
+              <a class="other-surah-link" href="2.html">سورة البقرة</a>
+              <a class="other-surah-link" href="3.html">سورة آل عمران</a>
+              <a class="other-surah-link" href="18.html">سورة الكهف</a>
+              <a class="other-surah-link" href="63.html">سورة المنافقون</a>
+              <a class="other-surah-link" href="16.html">سورة النحل</a>
+              <a class="other-surah-link" href="48.html">سورة الفتح</a>
+              <a class="other-surah-link" href="20.html">سورة طه</a>
+              <a class="other-surah-link" href="113.html">سورة الفلق</a>
+              <a class="other-surah-link" href="40.html">سورة غافر</a>
+            </div>
+          </section>
+
+          <section class="other-surahs-section same-surah-reciters-section" aria-labelledby="same-surah-reciters-title">
+            <h2 id="same-surah-reciters-title">سورة التوبة بصوت قراء آخرين</h2>
+            <div class="other-surahs-grid same-surah-reciters-grid">
+              <a class="other-surah-link same-surah-reciter-link" href="../koshi/9.html">
+  <img class="same-surah-reciter-image" src="../../images/koshi.webp" alt="صورة الشيخ العيون الكوشي" loading="lazy">
+  <span>سورة التوبة بصوت الشيخ العيون الكوشي</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../ibrahim_dosri/9.html">
+  <img class="same-surah-reciter-image" src="../../images/ibrahim_dosri.webp" alt="صورة الشيخ إبراهيم الدوسري" loading="lazy">
+  <span>سورة التوبة بصوت الشيخ إبراهيم الدوسري</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../shatri/9.html">
+  <img class="same-surah-reciter-image" src="../../images/shatri.webp" alt="صورة الشيخ أبو بكر الشاطري" loading="lazy">
+  <span>سورة التوبة بصوت الشيخ أبو بكر الشاطري</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../shur/9.html">
+  <img class="same-surah-reciter-image" src="../../images/shur.webp" alt="صورة الشيخ سعود الشريم" loading="lazy">
+  <span>سورة التوبة بصوت الشيخ سعود الشريم</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../sayed/9.html">
+  <img class="same-surah-reciter-image" src="../../images/sayed.webp" alt="صورة الشيخ سيد رمضان" loading="lazy">
+  <span>سورة التوبة بصوت الشيخ سيد رمضان</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../fateh/9.html">
+  <img class="same-surah-reciter-image" src="../../images/fateh.webp" alt="صورة الشيخ الفاتح محمد الزبير" loading="lazy">
+  <span>سورة التوبة بصوت الشيخ الفاتح محمد الزبير</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../qht/9.html">
+  <img class="same-surah-reciter-image" src="../../images/qht.webp" alt="صورة الشيخ خالد القحطاني" loading="lazy">
+  <span>سورة التوبة بصوت الشيخ خالد القحطاني</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../qeniwa/9.html">
+  <img class="same-surah-reciter-image" src="../../images/qeniwa.webp" alt="صورة الشيخ محمد الأمين قنيوة" loading="lazy">
+  <span>سورة التوبة بصوت الشيخ محمد الأمين قنيوة</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../qtm/9.html">
+  <img class="same-surah-reciter-image" src="../../images/qtm.webp" alt="صورة الشيخ ناصر القطامي" loading="lazy">
+  <span>سورة التوبة بصوت الشيخ ناصر القطامي</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../s_gmd/9.html">
+  <img class="same-surah-reciter-image" src="../../images/s_gmd.webp" alt="صورة الشيخ سعد الغامدي" loading="lazy">
+  <span>سورة التوبة بصوت الشيخ سعد الغامدي</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../yasser/9.html">
+  <img class="same-surah-reciter-image" src="../../images/yasser.webp" alt="صورة الشيخ ياسر الدوسري" loading="lazy">
+  <span>سورة التوبة بصوت الشيخ ياسر الدوسري</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../khan/9.html">
+  <img class="same-surah-reciter-image" src="../../images/khan.webp" alt="صورة الشيخ محمد عثمان خان" loading="lazy">
+  <span>سورة التوبة بصوت الشيخ محمد عثمان خان</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../namh/9.html">
+  <img class="same-surah-reciter-image" src="../../images/namh.webp" alt="صورة الشيخ نعمة الحسان" loading="lazy">
+  <span>سورة التوبة بصوت الشيخ نعمة الحسان</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../akrm/9.html">
+  <img class="same-surah-reciter-image" src="../../images/akrm.webp" alt="صورة الشيخ أكرم العلاقمي" loading="lazy">
+  <span>سورة التوبة بصوت الشيخ أكرم العلاقمي</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../m_sayed/9.html">
+  <img class="same-surah-reciter-image" src="../../images/m_sayed.webp" alt="صورة الشيخ محمد سايد" loading="lazy">
+  <span>سورة التوبة بصوت الشيخ محمد سايد</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../zaki/9.html">
+  <img class="same-surah-reciter-image" src="../../images/zaki.webp" alt="صورة الشيخ زكي داغستاني" loading="lazy">
+  <span>سورة التوبة بصوت الشيخ زكي داغستاني</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../saad/9.html">
+  <img class="same-surah-reciter-image" src="../../images/saad.webp" alt="صورة الشيخ سعد المقرن" loading="lazy">
+  <span>سورة التوبة بصوت الشيخ سعد المقرن</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../qurashi/9.html">
+  <img class="same-surah-reciter-image" src="../../images/qurashi.webp" alt="صورة الشيخ ياسر القرشي" loading="lazy">
+  <span>سورة التوبة بصوت الشيخ ياسر القرشي</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../ayyoub2/9.html">
+  <img class="same-surah-reciter-image" src="../../images/ayyoub2.webp" alt="صورة الشيخ محمد أيوب" loading="lazy">
+  <span>سورة التوبة بصوت الشيخ محمد أيوب</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../ajm/9.html">
+  <img class="same-surah-reciter-image" src="../../images/ajm.webp" alt="صورة الشيخ أحمد بن علي العجمي" loading="lazy">
+  <span>سورة التوبة بصوت الشيخ أحمد بن علي العجمي</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../habdan/9.html">
+  <img class="same-surah-reciter-image" src="../../images/habdan.webp" alt="صورة الشيخ صالح الهبدان" loading="lazy">
+  <span>سورة التوبة بصوت الشيخ صالح الهبدان</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../mhmdfqih/9.html">
+  <img class="same-surah-reciter-image" src="../../images/mhmdfqih.webp" alt="صورة الشيخ محمد الفقيه" loading="lazy">
+  <span>سورة التوبة بصوت الشيخ محمد الفقيه</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../shah/9.html">
+  <img class="same-surah-reciter-image" src="../../images/shah.webp" alt="صورة الشيخ محمد صالح عالم شاه" loading="lazy">
+  <span>سورة التوبة بصوت الشيخ محمد صالح عالم شاه</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../mtrod/9.html">
+  <img class="same-surah-reciter-image" src="../../images/mtrod.webp" alt="صورة الشيخ عبدالله المطرود" loading="lazy">
+  <span>سورة التوبة بصوت الشيخ عبدالله المطرود</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../rashad/9.html">
+  <img class="same-surah-reciter-image" src="../../images/rashad.webp" alt="صورة الشيخ محمد رشاد الشريف" loading="lazy">
+  <span>سورة التوبة بصوت الشيخ محمد رشاد الشريف</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../minsh/9.html">
+  <img class="same-surah-reciter-image" src="../../images/minsh.webp" alt="صورة الشيخ محمد صديق المنشاوي" loading="lazy">
+  <span>سورة التوبة بصوت الشيخ محمد صديق المنشاوي</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../h_dukhain/9.html">
+  <img class="same-surah-reciter-image" src="../../images/h_dukhain.webp" alt="صورة الشيخ هيثم الدخين" loading="lazy">
+  <span>سورة التوبة بصوت الشيخ هيثم الدخين</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../balilah/9.html">
+  <img class="same-surah-reciter-image" src="../../images/balilah.webp" alt="صورة الشيخ بندر بليلة" loading="lazy">
+  <span>سورة التوبة بصوت الشيخ بندر بليلة</span>
+</a>
+            </div>
+          </section>
+
+        </article>
+      </div>
+
+      <aside class="sidebar">
+        <div class="download-quran">القرآن الكريم</div>
+
+        <div class="mushaf-section">
+          <a href="../../quran-pdf.html">
+            <img src="../../images/hafs.webp" alt="تحميل القرآن الكريم">
+            <p class="mushaf-caption">إصدارات مصحف حفص PDF</p>
+          </a>
+        </div>
+
+        <hr class="separator">
+
+        <div class="download-quran">روابط مهمة</div>
+
+        <div class="sidebar-links">
+          <ul>
+            <li><a href="../../fahras.html">فهرس السور</a></li>
+            <li><a href="../../quran-pdf.html">تحميل القرآن PDF</a></li>
+            <li><a href="../../quran-mp3.html">الاستماع إلى القرآن</a></li>
+          </ul>
+        </div>
+
+        <hr class="separator">
+
+        <div class="download-quran">أشهر القراء</div>
+
+        <div class="reciters">
+          <a href="../sds/9.html" class="reciter">
+            <img src="../../images/sds.webp" alt="عبدالرحمن السديس" loading="lazy">
+            <span>عبدالرحمن السديس</span>
+          </a>
+          <a href="../shur/9.html" class="reciter">
+            <img src="../../images/shur.webp" alt="سعود الشريم" loading="lazy">
+            <span>سعود الشريم</span>
+          </a>
+          <a href="../minsh/9.html" class="reciter">
+            <img src="../../images/minsh.webp" alt="محمد صديق المنشاوي" loading="lazy">
+            <span>محمد صديق المنشاوي</span>
+          </a>
+          <a href="../afs/9.html" class="reciter">
+            <img src="../../images/afs.webp" alt="مشاري العفاسي" loading="lazy">
+            <span>مشاري العفاسي</span>
+          </a>
+          <a href="../ajm/9.html" class="reciter">
+            <img src="../../images/ajm.webp" alt="أحمد بن علي العجمي" loading="lazy">
+            <span>أحمد بن علي العجمي</span>
+          </a>
+          <a href="../basit/9.html" class="reciter">
+            <img src="../../images/basit.webp" alt="عبدالباسط عبدالصمد" loading="lazy">
+            <span>عبدالباسط عبدالصمد</span>
+          </a>
+          <a href="../s_gmd/9.html" class="reciter">
+            <img src="../../images/s_gmd.webp" alt="سعد الغامدي" loading="lazy">
+            <span>سعد الغامدي</span>
+          </a>
+          <a href="../yasser/9.html" class="reciter">
+            <img src="../../images/yasser.webp" alt="ياسر الدوسري" loading="lazy">
+            <span>ياسر الدوسري</span>
+          </a>
+        </div>
+
+        <hr class="separator">
+
+        <div class="download-quran">ذكر ودعاء</div>
+
+        <div class="sidebar-links">
+          <ul>
+            <li><a href="../../azkar.html">أذكار الصباح والمساء</a></li>
+            <li><a href="../../duas.html">أدعية النبي ﷺ</a></li>
+            <li><a href="../../ruqia.html">الرقية الشرعية</a></li>
+          </ul>
+        </div>
+      </aside>
+
+    </main>
+  </div>
+
+  <footer>
+    <div class="page-wrapper">
+      <p>© موقع القرآن الكريم</p>
+    </div>
+  </footer>
+
+  <script src="../../dark-mode.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>القرآن الكريم</title>
+
+
+  <meta name="description" content="القرآن الكريم مكتوب كاملًا، تصفح السور والآيات في موقع بسيط وسريع.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+  #searchResults { display:none; max-height:420px; margin-top:10px; overflow-y:auto; border:1px solid #e1e1e1; border-radius:12px; background:#fff; box-shadow:0 8px 22px rgba(20,29,55,.10); }
+  #searchResults.is-visible { display:block; }
+  .quran-search-result { display:block; padding:12px 14px; border-bottom:1px solid #ededed; color:#17203b; text-decoration:none !important; line-height:1.75; transition:background-color .2s ease; }
+  .quran-search-result:last-child { border-bottom:0; }
+  .quran-search-result:hover, .quran-search-result:focus { background:#fff7e8; }
+  .quran-search-result strong { display:block; margin-bottom:3px; color:#6d3bb5; font-size:15px; }
+  .quran-search-result span { display:block; color:#333; font-size:15px; }
+  .search-message { margin:0; padding:14px; color:#666; line-height:1.7; text-align:center; }
+</style>
+
+</head>
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="main-header">
+  <div class="container">
+<h1 class="logo">
+  <img src="images/QuranLogo.webp" alt="موقعي للقرآن الكريم">
+</h1>
+<nav class="main-nav" id="mainMenu">
+  <ul>
+<li><a href="index.html">الرئيسية</a></li>
+
+    <li><a href="fahras.html">فهرس القرآن الكريم</a></li>
+
+    <li class="dropdown">
+      <a href="quran-pdf.html">القرآن الكريم PDF ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="quran-pdf/mashaf-almadinat.html">مصحف المدينة المنورة</a></li>
+        <li><a href="quran-pdf/juza-eam.html">جزء عم</a></li>
+        <li><a href="quran-pdf/juza-tabarak.html">جزء تبارك</a></li>
+        <li><a href="quran-pdf/juza-qadsamie.html">جزء قد سمع</a></li>
+        <li><a href="quran-pdf/rube-ys.html">ربع يس</a></li>
+      </ul>
+    </li>
+
+    <li><a href="quran-mp3.html">القرآن الكريم MP3</a></li>
+    <li><a href="contact.html">اتصل بنا</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+
+<header>
+  <div class="page-wrapper">
+    <h1>القرآن الكريم</h1>
+  </div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="page-wrapper">
+<main>
+
+  <!-- المحتوى الرئيسي -->
+  <div class="content">
+    <img src="images/Al-Alaq.webp" alt="إقرأ باسم ربك الذي خلق" class="content-img">
+
+    <h2>مرحبًا بك في موقع سور القرآن</h2>
+    <p>هذا الموقع مخصص لعرض القرآن الكريم كاملًا مكتوبًا بالرسم العثماني</p>
+
+
+
+
+
+
+
+
+<p>
+  يمكنك الآن <a href="fahras.html">تصفح فهرس القرآن الكريم</a> بكل سهولة.
+</p>
+
+
+<p>
+  كما يمكنك  <a href="quran-pdf.html">تحميل وقراءة القرآن الكريم PDF</a> أو <a href="quran-mp3.html">تحميل القرآن الكريم MP3</a> أو الاستماع اليه بأصوات أشهر القراء.
+
+</p>
+
+
+
+
+
+
+    <!-- مستطيلات المعلومات -->
+    <section class="quran-stats">
+      <div class="stat-box">
+        <p>عدد السور</p>
+        <h3>114 سورة</h3>
+      </div>
+      <div class="stat-box">
+        <p>عدد الأجزاء</p>
+        <h3>30 جزء</h3>
+      </div>
+ <div class="stat-box">
+        <p>عدد الآيات</p>
+        <h3>6236 آية</h3>
+      </div>
+    </section>
+
+
+
+
+<p>
+بحمد الله وتوفيقه
+أُنشئ هذا الموقع لتسهيل قراءة القرآن الكريم
+وتصفحه بوضوح.
+لا تنسونا من صالح الدعاء.
+</p>
+
+
+
+
+
+  </div>
+
+
+
+
+
+<!-- العمود الجانبي --> 
+<aside class="sidebar">
+  
+  
+<!-- مكان شريط البحث -->
+<div class="quran-search">
+  <form class="search-box" id="quranSearchForm" role="search" action="search.html" method="get">
+  <div class="search-inner">
+    <input type="text" id="searchInput" name="q" placeholder="ابحث في القرآن" required>
+    <button type="submit" id="searchBtn" aria-label="بحث">
+      <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+        <circle cx="11" cy="11" r="7" fill="none" stroke="#ffffff" stroke-width="4"/>
+        <line x1="16.5" y1="16.5" x2="22" y2="22" stroke="white" stroke-width="4" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  <div id="searchResults" aria-live="polite"></div>
+  </form>
+</div>
+
+
+
+<!-- بعد شريط البحث مباشرة -->
+<hr class="separator">
+
+
+
+<!-- شريط عرض ثابت -->
+<div class="download-quran">
+  تحميل القرآن الكريم
+</div>
+
+
+
+<!-- قسم الصورة وروابط التحميل -->
+
+<div class="mushaf-section">
+  <a href="quran-pdf.html"> <!-- الرابط لصفحة التحميل -->
+    <img src="images/hafs.webp" alt="تحميل القرآن الكريم">
+
+    <p class="mushaf-caption">إصدارات مصحف حفص PDF</p>
+  </a>
+</div>
+
+
+<!-- بعد قسم تحميل القرآن الكريم -->
+<hr class="separator">
+<!-- شريط عرض ثابت -->
+<div class="download-quran">
+  أشهر القراء
+</div>
+
+<div class="reciters">
+          <a href="quran-mp3/sds/1.html" class="reciter"><img src="images/sds.webp" alt="عبدالرحمن السديس" loading="lazy"><span>عبدالرحمن السديس</span></a>
+          <a href="quran-mp3/shur/1.html" class="reciter"><img src="images/shur.webp" alt="سعود الشريم" loading="lazy"><span>سعود الشريم</span></a>
+          <a href="quran-mp3/minsh/1.html" class="reciter"><img src="images/minsh.webp" alt="محمد صديق المنشاوي" loading="lazy"><span>محمد صديق المنشاوي</span></a>
+          <a href="quran-mp3/afs/1.html" class="reciter"><img src="images/afs.webp" alt="مشاري العفاسي" loading="lazy"><span>مشاري العفاسي</span></a>
+          <a href="quran-mp3/ajm/1.html" class="reciter"><img src="images/ajm.webp" alt="أحمد بن علي العجمي" loading="lazy"><span>أحمد بن علي العجمي</span></a>
+          <a href="quran-mp3/basit/1.html" class="reciter"><img src="images/basit.webp" alt="عبدالباسط عبدالصمد" loading="lazy"><span>عبدالباسط عبدالصمد</span></a>
+          <a href="quran-mp3/s_gmd/1.html" class="reciter"><img src="images/s_gmd.webp" alt="سعد الغامدي" loading="lazy"><span>سعد الغامدي</span></a>
+          <a href="quran-mp3/yasser/1.html" class="reciter"><img src="images/yasser.webp" alt="ياسر الدوسري" loading="lazy"><span>ياسر الدوسري</span></a>
+        <a href="quran-mp3/ali/1.html" class="reciter"><img src="images/ali.webp" alt="علي جابر" loading="lazy"><span>علي جابر</span></a>
+        </div>
+
+
+<meta name="keywords" content="القرآن الكريم, المصحف الشريف, قراءة القرآن, تفسير القرآن, سور القرآن, آيات القرآن">
+
+
+</aside>
+
+
+
+  </main>
+</div>
+
+
+
+
+
+
+
+
+
+
+<script type="application/json" id="oldSearchCode">
+let quranData = [];
+
+// تحميل JSON مرة واحدة
+fetch('quran.json')
+  .then(res => res.json())
+  .then(json => quranData = json)
+  .catch(err => console.error("خطأ في تحميل quran.json:", err));
+
+const input = document.getElementById('searchInput');
+const results = document.getElementById('searchResults');
+
+input.addEventListener('input', function() {
+  const keyword = this.value.trim();
+  results.innerHTML = '';
+
+  if (keyword === '') return;
+
+  const regex = new RegExp(keyword, 'gi');
+
+  // تصفية النتائج
+  const matches = quranData.filter(item => item.ayah.match(regex));
+
+  matches.forEach(item => {
+    const div = document.createElement('div');
+    div.classList.add('result');
+    div.innerHTML = `
+      <strong>${item.surah} (${item.number})</strong>: 
+      ${item.ayah.replace(regex, match => `<mark>${match}</mark>`)}
+    `;
+    results.appendChild(div);
+  });
+});
+
+
+
+
+ // تعديل لشريط البحث
+
+
+const searchBtn = document.getElementById('searchBtn');
+
+function runSearch() {
+  const keyword = input.value.trim();
+  results.innerHTML = '';
+  if (keyword === '') return;
+
+  const regex = new RegExp(keyword, 'gi');
+  const matches = quranData.filter(item => item.ayah.match(regex));
+
+  matches.forEach(item => {
+    const div = document.createElement('div');
+    div.classList.add('result');
+    div.innerHTML = `
+      <strong>${item.surah} (${item.number})</strong>:
+      ${item.ayah.replace(regex, m => `<mark>${m}</mark>`)}
+    `;
+    results.appendChild(div);
+  });
+}
+
+searchBtn.addEventListener('click', runSearch);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="application/json" id="oldInlineResultsCode">
+  const searchForm = document.getElementById('quranSearchForm');
+  const searchInput = document.getElementById('searchInput');
+  const searchResults = document.getElementById('searchResults');
+  let searchableQuran = [];
+
+  function normalizeArabic(text) {
+    return String(text || '')
+      .normalize('NFD')
+      .replace(/[\u064B-\u065F\u0670\u06D6-\u06ED]/g, '')
+      .replace(/[أإآٱ]/g, 'ا')
+      .replace(/ى/g, 'ي')
+      .replace(/ؤ/g, 'و')
+      .replace(/ئ/g, 'ي')
+      .replace(/ـ/g, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+  }
+
+  function showSearchMessage(message) {
+    searchResults.replaceChildren();
+    const paragraph = document.createElement('p');
+    paragraph.className = 'search-message';
+    paragraph.textContent = message;
+    searchResults.appendChild(paragraph);
+    searchResults.classList.add('is-visible');
+  }
+
+  fetch('quran.json')
+    .then(response => {
+      if (!response.ok) throw new Error('تعذر تحميل ملف القرآن');
+      return response.json();
+    })
+    .then(json => {
+      const surahOrder = [
+        'الفاتحة','البقرة','آل عمران','النساء','المائدة','الأنعام','الأعراف','الأنفال','التوبة','يونس',
+        'هود','يوسف','الرعد','إبراهيم','الحجر','النحل','الإسراء','الكهف','مريم','طه',
+        'الأنبياء','الحج','المؤمنون','النور','الفرقان','الشعراء','النمل','القصص','العنكبوت','الروم',
+        'لقمان','السجدة','الأحزاب','سبإ','فاطر','يس','الصافات','ص','الزمر','غافر',
+        'فصلت','الشورى','الزخرف','الدخان','الجاثية','الأحقاف','محمد','الفتح','الحجرات','ق',
+        'الذاريات','الطور','النجم','القمر','الرحمن','الواقعة','الحديد','المجادلة','الحشر','الممتحنة',
+        'الصف','الجمعة','المنافقون','التغابن','الطلاق','التحريم','الملك','القلم','الحاقة','المعارج',
+        'نوح','الجن','المزمل','المدثر','القيامة','الإنسان','المرسلات','النبأ','النازعات','عبس',
+        'التكوير','الانفطار','المطففين','الانشقاق','البروج','الطارق','الأعلى','الغاشية','الفجر','البلد',
+        'الشمس','الليل','الضحى','الشرح','التين','العلق','القدر','البينة','الزلزلة','العاديات',
+        'القارعة','التكاثر','العصر','الهمزة','الفيل','قريش','الماعون','الكوثر','الكافرون','النصر',
+        'المسد','الإخلاص','الفلق','الناس'
+      ];
+      const surahNumbers = new Map(surahOrder.map((name, index) => [name, index + 1]));
+      const ayahCounters = new Map();
+
+      searchableQuran = json.map(item => {
+        const surahName = String(item.surah || '').trim();
+        if (!ayahCounters.has(surahName)) {
+          ayahCounters.set(surahName, 0);
+        }
+        const ayahNumber = ayahCounters.get(surahName) + 1;
+        ayahCounters.set(surahName, ayahNumber);
+        return {
+          ...item,
+          surahNumber: surahNumbers.get(surahName),
+          ayahNumber,
+          normalizedAyah: normalizeArabic(item.ayah),
+          normalizedSurah: normalizeArabic(surahName)
+        };
+      });
+    })
+    .catch(error => {
+      console.error('خطأ في تحميل quran.json:', error);
+      showSearchMessage('تعذر تشغيل البحث. تأكد من وجود ملف quran.json وتشغيل الموقع من خلال الخادم المحلي.');
+    });
+
+  function runQuranSearch() {
+    const keyword = normalizeArabic(searchInput.value);
+    searchResults.replaceChildren();
+
+    if (!keyword) {
+      searchResults.classList.remove('is-visible');
+      return;
+    }
+    if (!searchableQuran.length) {
+      showSearchMessage('جاري تحميل بيانات القرآن الكريم، حاول مرة أخرى بعد لحظات.');
+      return;
+    }
+
+    const matches = searchableQuran
+      .filter(item => item.normalizedAyah.includes(keyword) || item.normalizedSurah.includes(keyword))
+      .slice(0, 50);
+
+    if (!matches.length) {
+      showSearchMessage('لم يتم العثور على نتائج. جرّب كتابة كلمة أخرى دون تشكيل.');
+      return;
+    }
+
+    const fragment = document.createDocumentFragment();
+    matches.forEach(item => {
+      const link = document.createElement('a');
+      link.className = 'quran-search-result';
+      link.href = `surah/${item.surahNumber}.html`;
+
+      const title = document.createElement('strong');
+      title.textContent = `سورة ${item.surah} — الآية ${item.ayahNumber}`;
+      const ayah = document.createElement('span');
+      ayah.textContent = item.ayah;
+
+      link.append(title, ayah);
+      fragment.appendChild(link);
+    });
+    searchResults.appendChild(fragment);
+    searchResults.classList.add('is-visible');
+  }
+
+  searchForm.addEventListener('submit', event => {
+    event.preventDefault();
+    runQuranSearch();
+  });
+
+  let searchTimer;
+  searchInput.addEventListener('input', () => {
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(runQuranSearch, 180);
+  });
+</script>
+
+<footer>
+  <div class="page-wrapper">
+    <p>© موقع القرآن الكريم</p>
+  </div>
+</footer>
+<script src="dark-mode.js" defer></script>
+</body>
+</html>
+

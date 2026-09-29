@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>البحث في القرآن الكريم</title>
+  <meta name="description" content="البحث في آيات القرآن الكريم والانتقال إلى صفحة السورة.">
+  <meta name="robots" content="noindex,follow">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .search-page-content { min-width:0; }
+    .search-page-box { width:100%; }
+    .full-search-form { display:flex; width:100%; max-width:760px; margin:0 auto 28px; overflow:hidden; border:1px solid #ddd; border-radius:14px; background:#fff; box-shadow:0 6px 20px rgba(20,29,55,.08); }
+    .full-search-form input { flex:1; min-width:0; padding:15px 17px; border:0; outline:0; background:#fff; color:#17203b; font-size:17px; font-family:inherit; }
+    .full-search-form button { min-width:105px; padding:13px 18px; border:0; background:#6d3bb5; color:#fff; font-size:16px; font-weight:700; font-family:inherit; cursor:pointer; }
+    .search-summary { margin:0 0 18px; color:#555; font-size:17px; line-height:1.8; text-align:center; }
+    .search-results-list { display:grid; gap:14px; }
+    .search-result-card { display:block; padding:20px 21px; border:1px solid #e3e3e3; border-right:5px solid #e39d3d; border-radius:16px; background:#fafafa; color:#17203b; text-decoration:none !important; box-shadow:0 4px 15px rgba(23,31,56,.05); transition:transform .2s ease, box-shadow .2s ease; }
+    .search-result-card:hover, .search-result-card:focus { transform:translateY(-2px); box-shadow:0 8px 22px rgba(23,31,56,.10); }
+    .search-result-title { display:block; margin-bottom:7px; color:#6d3bb5; font-size:17px; font-weight:800; }
+    .search-result-ayah { display:block; color:#17203b; font-size:19px; font-weight:600; line-height:2; }
+    .search-status { margin:20px 0; padding:20px; border-radius:14px; background:#fff8e8; color:#62471f; line-height:1.8; text-align:center; }
+    @media (max-width:900px) {
+      html,body { width:100%; max-width:100%; overflow-x:hidden; }
+      .page-wrapper { width:100% !important; max-width:100% !important; margin:0 auto !important; padding:0 14px !important; box-sizing:border-box !important; }
+      main { width:100% !important; max-width:100% !important; margin:20px auto !important; padding:0 !important; flex-direction:column !important; gap:24px !important; box-sizing:border-box !important; }
+      .content,.search-page-content,.search-page-box,.sidebar { width:100% !important; max-width:100% !important; min-width:0 !important; margin:0 !important; box-sizing:border-box !important; }
+    }
+    @media (max-width:520px) {
+      .full-search-form button { min-width:78px; padding:12px 10px; }
+      .search-result-card { padding:17px 16px; }
+      .search-result-ayah { font-size:17px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+      <a href="index.html" class="logo"><img src="images/QuranLogo.webp" alt="موقع القرآن الكريم"></a>
+      <nav class="main-nav" aria-label="القائمة الرئيسية">
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="fahras.html">فهرس القرآن الكريم</a></li>
+          <li class="dropdown"><a href="quran-pdf.html">القرآن الكريم PDF ▾</a><ul class="dropdown-menu"><li><a href="quran-pdf/mashaf-almadinat.html">مصحف المدينة المنورة</a></li><li><a href="quran-pdf/juza-eam.html">جزء عم</a></li><li><a href="quran-pdf/juza-tabarak.html">جزء تبارك</a></li><li><a href="quran-pdf/juza-qadsamie.html">جزء قد سمع</a></li><li><a href="quran-pdf/rube-ys.html">ربع يس</a></li></ul></li>
+          <li><a href="quran-mp3.html">القرآن الكريم MP3</a></li>
+          <li><a href="contact.html">اتصل بنا</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <header class="page-header"><div class="page-wrapper"><h1>البحث في القرآن الكريم</h1></div></header>
+
+  <div class="page-wrapper">
+    <main>
+      <div class="content search-page-content">
+        <article class="search-page-box">
+          <form class="full-search-form" action="search.html" method="get" role="search">
+            <input type="search" id="pageSearchInput" name="q" placeholder="اكتب كلمة أو جزءًا من آية" required>
+            <button type="submit">بحث</button>
+          </form>
+          <p class="search-summary" id="searchSummary"></p>
+          <div class="search-results-list" id="searchResults" aria-live="polite"></div>
+        </article>
+      </div>
+
+      <aside class="sidebar">
+        <div class="download-quran">القرآن الكريم</div>
+        <div class="mushaf-section"><a href="quran-pdf.html"><img src="images/hafs.webp" alt="تحميل القرآن الكريم"><p class="mushaf-caption">إصدارات مصحف حفص PDF</p></a></div>
+        <hr class="separator">
+        <div class="download-quran">روابط مهمة</div>
+        <div class="sidebar-links"><ul><li><a href="fahras.html">فهرس السور</a></li><li><a href="quran-pdf.html">تحميل القرآن PDF</a></li><li><a href="quran-mp3.html">الاستماع إلى القرآن</a></li></ul></div>
+        <hr class="separator">
+        <div class="download-quran">ذكر ودعاء</div>
+        <div class="sidebar-links"><ul><li><a href="azkar.html">أذكار الصباح والمساء</a></li><li><a href="duas.html">أدعية النبي ﷺ</a></li><li><a href="ruqia.html">الرقية الشرعية</a></li></ul></div>
+      </aside>
+    </main>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const query = (params.get('q') || '').trim();
+    const input = document.getElementById('pageSearchInput');
+    const summary = document.getElementById('searchSummary');
+    const results = document.getElementById('searchResults');
+    input.value = query;
+
+    function normalizeArabic(text) {
+      return String(text || '').normalize('NFD').replace(/[\u064B-\u065F\u0670\u06D6-\u06ED]/g,'').replace(/[أإآٱ]/g,'ا').replace(/ى/g,'ي').replace(/ؤ/g,'و').replace(/ئ/g,'ي').replace(/ـ/g,'').replace(/\s+/g,' ').trim();
+    }
+    function status(message) {
+      results.replaceChildren();
+      const p=document.createElement('p'); p.className='search-status'; p.textContent=message; results.appendChild(p);
+    }
+
+    const surahOrder=['الفاتحة','البقرة','آل عمران','النساء','المائدة','الأنعام','الأعراف','الأنفال','التوبة','يونس','هود','يوسف','الرعد','إبراهيم','الحجر','النحل','الإسراء','الكهف','مريم','طه','الأنبياء','الحج','المؤمنون','النور','الفرقان','الشعراء','النمل','القصص','العنكبوت','الروم','لقمان','السجدة','الأحزاب','سبإ','فاطر','يس','الصافات','ص','الزمر','غافر','فصلت','الشورى','الزخرف','الدخان','الجاثية','الأحقاف','محمد','الفتح','الحجرات','ق','الذاريات','الطور','النجم','القمر','الرحمن','الواقعة','الحديد','المجادلة','الحشر','الممتحنة','الصف','الجمعة','المنافقون','التغابن','الطلاق','التحريم','الملك','القلم','الحاقة','المعارج','نوح','الجن','المزمل','المدثر','القيامة','الإنسان','المرسلات','النبأ','النازعات','عبس','التكوير','الانفطار','المطففين','الانشقاق','البروج','الطارق','الأعلى','الغاشية','الفجر','البلد','الشمس','الليل','الضحى','الشرح','التين','العلق','القدر','البينة','الزلزلة','العاديات','القارعة','التكاثر','العصر','الهمزة','الفيل','قريش','الماعون','الكوثر','الكافرون','النصر','المسد','الإخلاص','الفلق','الناس'];
+    const surahNumbers=new Map(surahOrder.map((name,index)=>[name,index+1]));
+
+    if (!query) {
+      summary.textContent='اكتب كلمة أو جزءًا من آية في مربع البحث.';
+      status('لم تُكتب كلمة للبحث.');
+    } else {
+      summary.textContent=`نتائج البحث عن: «${query}»`;
+      status('جاري البحث في القرآن الكريم...');
+      fetch('quran.json')
+        .then(response=>{ if(!response.ok) throw new Error(); return response.json(); })
+        .then(data=>{
+          const keyword=normalizeArabic(query);
+          const counters=new Map();
+          const matches=[];
+          data.forEach(item=>{
+            const name=String(item.surah||'').trim();
+            const ayahNumber=(counters.get(name)||0)+1;
+            counters.set(name,ayahNumber);
+            if(normalizeArabic(item.ayah).includes(keyword)||normalizeArabic(name).includes(keyword)) matches.push({...item,surahNumber:surahNumbers.get(name),ayahNumber});
+          });
+          results.replaceChildren();
+          summary.textContent=`تم العثور على ${matches.length} نتيجة للبحث عن: «${query}»`;
+          if(!matches.length){ status('لم يتم العثور على نتائج. جرّب كتابة كلمة أخرى دون تشكيل.'); return; }
+          const fragment=document.createDocumentFragment();
+          matches.forEach(item=>{
+            const link=document.createElement('a'); link.className='search-result-card'; link.href=`surah/${item.surahNumber}.html`;
+            const title=document.createElement('strong'); title.className='search-result-title'; title.textContent=`سورة ${item.surah} — الآية ${item.ayahNumber}`;
+            const ayah=document.createElement('span'); ayah.className='search-result-ayah'; ayah.textContent=item.ayah;
+            link.append(title,ayah); fragment.appendChild(link);
+          });
+          results.appendChild(fragment);
+        })
+        .catch(()=>status('تعذر تحميل بيانات القرآن. تأكد من وجود quran.json وتشغيل الموقع عبر الخادم المحلي.'));
+    }
+  </script>
+
+  <footer><div class="page-wrapper"><p>© موقع القرآن الكريم</p></div></footer>
+  <script src="dark-mode.js" defer></script>
+</body>
+</html>
+

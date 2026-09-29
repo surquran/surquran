@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>سورة الفرقان بصوت الشيخ عبدالباري الثبيتي MP3</title>
+  <meta name="description" content="استمع إلى سورة الفرقان بصوت الشيخ عبدالباري الثبيتي مع إمكانية التحميل المباشر للسورة بصيغة MP3">
+  <meta name="robots" content="index,follow">
+
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="../../css/quran-mp3.css">
+
+  <style>
+    .surah-audio-card {
+      max-width: 760px;
+      margin: 0 auto 32px;
+      padding: 28px;
+      border: 1px solid #e2e2e2;
+      border-radius: 14px;
+      background: #fff;
+      text-align: center;
+      box-sizing: border-box;
+    }
+
+    .surah-reciter-image {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
+      margin: 0 auto 18px;
+    }
+
+    .surah-audio-card h2 { margin: 8px 0 12px; }
+
+    .surah-description {
+      margin: 0 auto 22px;
+      max-width: 680px;
+      line-height: 1.9;
+    }
+
+    .surah-audio-player {
+      width: 100%;
+      max-width: 650px;
+      display: block;
+      margin: 0 auto 16px;
+    }
+
+    .download-mp3-btn {
+      display: inline-block;
+      margin: 4px auto 8px;
+      padding: 12px 22px;
+      border-radius: 10px;
+      background: #1f7a5c;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .download-mp3-btn:hover { opacity: .9; }
+
+    .surah-nav {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .surah-nav a, .surah-nav span {
+      flex: 1;
+      text-decoration: none;
+      padding: 10px 14px;
+    }
+
+    .surah-nav .disabled { opacity: .45; }
+
+    .other-surahs-section { margin-top: 34px; }
+
+    .other-surahs-section h2 { margin-bottom: 20px; }
+
+    .other-surahs-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0;
+      border-top: 1px solid #dedede;
+      border-right: 1px solid #dedede;
+    }
+
+    .other-surah-link {
+      display: block;
+      padding: 12px 10px;
+      border: 0;
+      border-left: 1px solid #dedede;
+      border-bottom: 1px solid #dedede;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    .same-surah-reciters-section {
+      margin-top: 40px;
+    }
+
+    .same-surah-reciters-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      border: 0;
+    }
+
+    .same-surah-reciter-link {
+      display: flex;
+      min-height: 190px;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 12px;
+      box-sizing: border-box;
+      background: #FAFAFA;
+      border: 1px solid #e4e4e4;
+      border-radius: 12px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .same-surah-reciter-image {
+      display: block;
+      width: 120px;
+      height: 120px;
+      margin: 0 auto;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .same-surah-reciter-link span {
+      display: block;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 700px) {
+      .surah-audio-card { padding: 20px 14px; }
+      .surah-reciter-image { width: 110px; height: 110px; }
+      .surah-nav { flex-direction: column; }
+      .same-surah-reciters-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 420px) {
+      .surah-index-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .same-surah-reciters-grid { grid-template-columns: 1fr; }
+      .same-surah-reciter-link { min-height: 170px; }
+      .same-surah-reciter-image { width: 105px; height: 105px; }
+    }
+
+    @media (max-width: 900px) {
+      html, body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
+      .page-wrapper {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 14px !important;
+        left: 0 !important;
+        position: static !important;
+        box-sizing: border-box !important;
+      }
+
+      main {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 20px auto !important;
+        padding: 0 !important;
+        flex-direction: column !important;
+        gap: 24px !important;
+        box-sizing: border-box;
+      }
+
+      .content, .mp3-content, .mp3-page, .sidebar {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        margin: 0 !important;
+        box-sizing: border-box !important;
+      }
+
+      .surah-audio-card,
+      .surah-audio-player {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="main-header">
+    <div class="container">
+      <a href="../../index.html" class="logo">
+        <img src="../../images/QuranLogo.webp" alt="موقع القرآن الكريم">
+      </a>
+
+      <nav class="main-nav" aria-label="القائمة الرئيسية">
+        <ul>
+          <li><a href="../../index.html">الرئيسية</a></li>
+          <li><a href="../../fahras.html">فهرس القرآن الكريم</a></li>
+
+          <li class="dropdown">
+            <a href="../../quran-pdf.html">القرآن الكريم PDF ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="../../quran-pdf/mashaf-almadinat.html">مصحف المدينة المنورة</a></li>
+              <li><a href="../../quran-pdf/juza-eam.html">جزء عم</a></li>
+              <li><a href="../../quran-pdf/juza-tabarak.html">جزء تبارك</a></li>
+              <li><a href="../../quran-pdf/juza-qadsamie.html">جزء قد سمع</a></li>
+              <li><a href="../../quran-pdf/rube-ys.html">ربع يس</a></li>
+            </ul>
+          </li>
+
+          <li><a href="../../quran-mp3.html" aria-current="page">القرآن الكريم MP3</a></li>
+          <li><a href="../../contact.html">اتصل بنا</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <header class="page-header">
+    <div class="page-wrapper">
+      <h1>سورة الفرقان بصوت الشيخ عبدالباري الثبيتي</h1>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+    <main>
+
+      <div class="content mp3-content">
+        <article class="mp3-page">
+
+          <div class="surah-audio-card">
+
+            <img
+              class="surah-reciter-image"
+              src="../../images/thubti.webp"
+              alt="صورة الشيخ عبدالباري الثبيتي"
+              loading="lazy">
+
+            <h2>سورة الفرقان بصوت الشيخ عبدالباري الثبيتي</h2>
+
+            <p class="surah-description">
+              الاستماع لسورة الفرقان بصوت الشيخ عبدالباري الثبيتي
+              مع إمكانية التحميل المباشر للسورة بصيغة MP3
+            </p>
+
+            <!--
+              لا نستخدم
+              حتى يبقى خيار Download متاحاً من قائمة الثلاث نقاط
+              في المتصفحات التي تدعم ذلك.
+            -->
+            <audio class="surah-audio-player" controls autoplay preload="auto">
+              <source src="../../mp3/thubti/25.mp3" type="audio/mpeg">
+              متصفحك لا يدعم تشغيل ملفات الصوت.
+            </audio>
+
+            <a class="download-mp3-btn" href="../../mp3/thubti/25.mp3" download>
+              تحميل سورة الفرقان MP3
+            </a>
+
+            <nav class="surah-nav" aria-label="التنقل بين السور">
+              <a class="previous-surah" href="24.html">→ سورة النور</a>
+              <a class="next-surah" href="26.html">سورة الشعراء ←</a>
+            </nav>
+
+          </div>
+
+          <section class="other-surahs-section" aria-labelledby="other-surahs-title">
+            <h2 id="other-surahs-title">سور أخرى بصوت الشيخ عبدالباري الثبيتي</h2>
+            <div class="other-surahs-grid surah-index-grid">
+              <a class="other-surah-link" href="11.html">سورة هود</a>
+              <a class="other-surah-link" href="48.html">سورة الفتح</a>
+              <a class="other-surah-link" href="88.html">سورة الغاشية</a>
+              <a class="other-surah-link" href="10.html">سورة يونس</a>
+              <a class="other-surah-link" href="50.html">سورة ق</a>
+              <a class="other-surah-link" href="30.html">سورة الروم</a>
+              <a class="other-surah-link" href="16.html">سورة النحل</a>
+              <a class="other-surah-link" href="62.html">سورة الجمعة</a>
+              <a class="other-surah-link" href="94.html">سورة الشرح</a>
+              <a class="other-surah-link" href="41.html">سورة فصلت</a>
+              <a class="other-surah-link" href="105.html">سورة الفيل</a>
+              <a class="other-surah-link" href="12.html">سورة يوسف</a>
+              <a class="other-surah-link" href="32.html">سورة السجدة</a>
+              <a class="other-surah-link" href="7.html">سورة الأعراف</a>
+              <a class="other-surah-link" href="15.html">سورة الحجر</a>
+              <a class="other-surah-link" href="74.html">سورة المدثر</a>
+              <a class="other-surah-link" href="89.html">سورة الفجر</a>
+              <a class="other-surah-link" href="19.html">سورة مريم</a>
+            </div>
+          </section>
+
+          <section class="other-surahs-section same-surah-reciters-section" aria-labelledby="same-surah-reciters-title">
+            <h2 id="same-surah-reciters-title">سورة الفرقان بصوت قراء آخرين</h2>
+            <div class="other-surahs-grid same-surah-reciters-grid">
+              <a class="other-surah-link same-surah-reciter-link" href="../waleed/25.html">
+  <img class="same-surah-reciter-image" src="../../images/waleed.webp" alt="صورة الشيخ وليد النائحي" loading="lazy">
+  <span>سورة الفرقان بصوت الشيخ وليد النائحي</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../ryan/25.html">
+  <img class="same-surah-reciter-image" src="../../images/ryan.webp" alt="صورة الشيخ عادل ريان" loading="lazy">
+  <span>سورة الفرقان بصوت الشيخ عادل ريان</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../bsfr/25.html">
+  <img class="same-surah-reciter-image" src="../../images/bsfr.webp" alt="صورة الشيخ عبدالله بصفر" loading="lazy">
+  <span>سورة الفرقان بصوت الشيخ عبدالله بصفر</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../sheimy/25.html">
+  <img class="same-surah-reciter-image" src="../../images/sheimy.webp" alt="صورة الشيخ محمود الشيمي" loading="lazy">
+  <span>سورة الفرقان بصوت الشيخ محمود الشيمي</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../saber/25.html">
+  <img class="same-surah-reciter-image" src="../../images/saber.webp" alt="صورة الشيخ أحمد صابر" loading="lazy">
+  <span>سورة الفرقان بصوت الشيخ أحمد صابر</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../kh_mohammadi/25.html">
+  <img class="same-surah-reciter-image" src="../../images/kh_mohammadi.webp" alt="صورة الشيخ خالد كريم محمدي" loading="lazy">
+  <span>سورة الفرقان بصوت الشيخ خالد كريم محمدي</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../hani/25.html">
+  <img class="same-surah-reciter-image" src="../../images/hani.webp" alt="صورة الشيخ هاني الرفاعي" loading="lazy">
+  <span>سورة الفرقان بصوت الشيخ هاني الرفاعي</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../qtm/25.html">
+  <img class="same-surah-reciter-image" src="../../images/qtm.webp" alt="صورة الشيخ ناصر القطامي" loading="lazy">
+  <span>سورة الفرقان بصوت الشيخ ناصر القطامي</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../tareq/25.html">
+  <img class="same-surah-reciter-image" src="../../images/tareq.webp" alt="صورة الشيخ طارق عبدالغني دعوب" loading="lazy">
+  <span>سورة الفرقان بصوت الشيخ طارق عبدالغني دعوب</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../nufais/25.html">
+  <img class="same-surah-reciter-image" src="../../images/nufais.webp" alt="صورة الشيخ أحمد النفيس" loading="lazy">
+  <span>سورة الفرقان بصوت الشيخ أحمد النفيس</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../ibrahim_dosri/25.html">
+  <img class="same-surah-reciter-image" src="../../images/ibrahim_dosri.webp" alt="صورة الشيخ إبراهيم الدوسري" loading="lazy">
+  <span>سورة الفرقان بصوت الشيخ إبراهيم الدوسري</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../lhdan/25.html">
+  <img class="same-surah-reciter-image" src="../../images/lhdan.webp" alt="صورة الشيخ محمد اللحيدان" loading="lazy">
+  <span>سورة الفرقان بصوت الشيخ محمد اللحيدان</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../shur/25.html">
+  <img class="same-surah-reciter-image" src="../../images/shur.webp" alt="صورة الشيخ سعود الشريم" loading="lazy">
+  <span>سورة الفرقان بصوت الشيخ سعود الشريم</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../bilal/25.html">
+  <img class="same-surah-reciter-image" src="../../images/bilal.webp" alt="صورة الشيخ موسى بلال" loading="lazy">
+  <span>سورة الفرقان بصوت الشيخ موسى بلال</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../h_dukhain/25.html">
+  <img class="same-surah-reciter-image" src="../../images/h_dukhain.webp" alt="صورة الشيخ هيثم الدخين" loading="lazy">
+  <span>سورة الفرقان بصوت الشيخ هيثم الدخين</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../balilah/25.html">
+  <img class="same-surah-reciter-image" src="../../images/balilah.webp" alt="صورة الشيخ بندر بليلة" loading="lazy">
+  <span>سورة الفرقان بصوت الشيخ بندر بليلة</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../namh/25.html">
+  <img class="same-surah-reciter-image" src="../../images/namh.webp" alt="صورة الشيخ نعمة الحسان" loading="lazy">
+  <span>سورة الفرقان بصوت الشيخ نعمة الحسان</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../adel_alkalbani/25.html">
+  <img class="same-surah-reciter-image" src="../../images/adel_alkalbani.webp" alt="صورة الشيخ عادل الكلباني" loading="lazy">
+  <span>سورة الفرقان بصوت الشيخ عادل الكلباني</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../saad/25.html">
+  <img class="same-surah-reciter-image" src="../../images/saad.webp" alt="صورة الشيخ سعد المقرن" loading="lazy">
+  <span>سورة الفرقان بصوت الشيخ سعد المقرن</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../nabil/25.html">
+  <img class="same-surah-reciter-image" src="../../images/nabil.webp" alt="صورة الشيخ نبيل الرفاعي" loading="lazy">
+  <span>سورة الفرقان بصوت الشيخ نبيل الرفاعي</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../sayed/25.html">
+  <img class="same-surah-reciter-image" src="../../images/sayed.webp" alt="صورة الشيخ سيد رمضان" loading="lazy">
+  <span>سورة الفرقان بصوت الشيخ سيد رمضان</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../bader/25.html">
+  <img class="same-surah-reciter-image" src="../../images/bader.webp" alt="صورة الشيخ بدر التركي" loading="lazy">
+  <span>سورة الفرقان بصوت الشيخ بدر التركي</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../m_akri/25.html">
+  <img class="same-surah-reciter-image" src="../../images/m_akri.webp" alt="صورة الشيخ مروان العكري" loading="lazy">
+  <span>سورة الفرقان بصوت الشيخ مروان العكري</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../shatri/25.html">
+  <img class="same-surah-reciter-image" src="../../images/shatri.webp" alt="صورة الشيخ أبو بكر الشاطري" loading="lazy">
+  <span>سورة الفرقان بصوت الشيخ أبو بكر الشاطري</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../nasser_almajed/25.html">
+  <img class="same-surah-reciter-image" src="../../images/nasser_almajed.webp" alt="صورة الشيخ ناصر الماجد" loading="lazy">
+  <span>سورة الفرقان بصوت الشيخ ناصر الماجد</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../bu_khtr/25.html">
+  <img class="same-surah-reciter-image" src="../../images/bu_khtr.webp" alt="صورة الشيخ صلاح بو خاطر" loading="lazy">
+  <span>سورة الفرقان بصوت الشيخ صلاح بو خاطر</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../mohna/25.html">
+  <img class="same-surah-reciter-image" src="../../images/mohna.webp" alt="صورة الشيخ خالد المهنا" loading="lazy">
+  <span>سورة الفرقان بصوت الشيخ خالد المهنا</span>
+</a>
+              <a class="other-surah-link same-surah-reciter-link" href="../bna/25.html">
+  <img class="same-surah-reciter-image" src="../../images/bna.webp" alt="صورة الشيخ محمود علي البنا" loading="lazy">
+  <span>سورة الفرقان بصوت الشيخ محمود علي البنا</span>
+</a>
+            </div>
+          </section>
+
+        </article>
+      </div>
+
+      <aside class="sidebar">
+        <div class="download-quran">القرآن الكريم</div>
+
+        <div class="mushaf-section">
+          <a href="../../quran-pdf.html">
+            <img src="../../images/hafs.webp" alt="تحميل القرآن الكريم">
+            <p class="mushaf-caption">إصدارات مصحف حفص PDF</p>
+          </a>
+        </div>
+
+        <hr class="separator">
+
+        <div class="download-quran">روابط مهمة</div>
+
+        <div class="sidebar-links">
+          <ul>
+            <li><a href="../../fahras.html">فهرس السور</a></li>
+            <li><a href="../../quran-pdf.html">تحميل القرآن PDF</a></li>
+            <li><a href="../../quran-mp3.html">الاستماع إلى القرآن</a></li>
+          </ul>
+        </div>
+
+        <hr class="separator">
+
+        <div class="download-quran">أشهر القراء</div>
+
+        <div class="reciters">
+          <a href="../sds/25.html" class="reciter">
+            <img src="../../images/sds.webp" alt="عبدالرحمن السديس" loading="lazy">
+            <span>عبدالرحمن السديس</span>
+          </a>
+          <a href="../shur/25.html" class="reciter">
+            <img src="../../images/shur.webp" alt="سعود الشريم" loading="lazy">
+            <span>سعود الشريم</span>
+          </a>
+          <a href="../minsh/25.html" class="reciter">
+            <img src="../../images/minsh.webp" alt="محمد صديق المنشاوي" loading="lazy">
+            <span>محمد صديق المنشاوي</span>
+          </a>
+          <a href="../afs/25.html" class="reciter">
+            <img src="../../images/afs.webp" alt="مشاري العفاسي" loading="lazy">
+            <span>مشاري العفاسي</span>
+          </a>
+          <a href="../ajm/25.html" class="reciter">
+            <img src="../../images/ajm.webp" alt="أحمد بن علي العجمي" loading="lazy">
+            <span>أحمد بن علي العجمي</span>
+          </a>
+          <a href="../basit/25.html" class="reciter">
+            <img src="../../images/basit.webp" alt="عبدالباسط عبدالصمد" loading="lazy">
+            <span>عبدالباسط عبدالصمد</span>
+          </a>
+          <a href="../s_gmd/25.html" class="reciter">
+            <img src="../../images/s_gmd.webp" alt="سعد الغامدي" loading="lazy">
+            <span>سعد الغامدي</span>
+          </a>
+          <a href="../yasser/25.html" class="reciter">
+            <img src="../../images/yasser.webp" alt="ياسر الدوسري" loading="lazy">
+            <span>ياسر الدوسري</span>
+          </a>
+        </div>
+
+        <hr class="separator">
+
+        <div class="download-quran">ذكر ودعاء</div>
+
+        <div class="sidebar-links">
+          <ul>
+            <li><a href="../../azkar.html">أذكار الصباح والمساء</a></li>
+            <li><a href="../../duas.html">أدعية النبي ﷺ</a></li>
+            <li><a href="../../ruqia.html">الرقية الشرعية</a></li>
+          </ul>
+        </div>
+      </aside>
+
+    </main>
+  </div>
+
+  <footer>
+    <div class="page-wrapper">
+      <p>© موقع القرآن الكريم</p>
+    </div>
+  </footer>
+
+  <script src="../../dark-mode.js" defer></script>
+</body>
+</html>
