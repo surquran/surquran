@@ -2324,3 +2324,29 @@ body:has(.mp3-page) {
         font-size: 12px !important;
     }
 }
+
+
+
+
+/* ===== Footer legal links ===== */
+.footer-legal-links {
+    margin-top: 10px;
+    text-align: center;
+    line-height: 2;
+}
+.footer-legal-links a {
+    text-decoration: none;
+ color: #ffffff;
+
+
+}
+.footer-legal-links span {
+    margin: 0 7px;
+    opacity: .65;
+ color: #ffffff;
+}
+@media (max-width: 520px) {
+    .footer-legal-links { font-size: 14px; }
+    .footer-legal-links span { margin: 0 4px; }
+}
+
