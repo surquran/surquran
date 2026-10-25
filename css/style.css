@@ -2375,3 +2375,33 @@ body:has(.mp3-page) {
     .listening-reciter-card span{line-height:1.6;}
     .listening-reciter-card:hover{text-decoration:underline;}
     @media(max-width:650px){.listening-reciters-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;}.listening-reciter-card img{width:90px;height:90px;}}
+
+
+
+
+
+
+
+
+
+
+
+
+.mushaf-embed {
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.mushaf-embed iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 768px) {
+  .mushaf-embed {
+    height: 650px;
+  }
+}
