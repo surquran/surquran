@@ -2405,3 +2405,27 @@ body:has(.mp3-page) {
     height: 650px;
   }
 }
+
+
+
+
+
+
+/* Language selector - white text */
+.main-header .main-nav .surquran-language-wrap select,
+.main-header .main-nav #surquran-language {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Dropdown options */
+.main-header .main-nav #surquran-language option {
+    background-color: #ffffff !important;
+    color: #003366 !important;
+    -webkit-text-fill-color: #003366 !important;
+}
+
